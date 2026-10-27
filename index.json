@@ -73,8 +73,8 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-10-26T18:07:26+01:00",
-      "state": "stalled",
+      "updated_at": "2026-10-28T00:09:05+01:00",
+      "state": "running",
       "workflow": "committee_uncertainty",
       "elements": [
         "C"
