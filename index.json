@@ -4,7 +4,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-10-28T06:08:31+01:00",
+      "updated_at": "2026-10-28T07:25:00+01:00",
       "state": "running",
       "workflow": "committee_uncertainty",
       "elements": [
@@ -22,14 +22,16 @@
         "total": 45,
         "completed": 44
       },
-      "phase": "train_mlip",
+      "phase": "generate_structures",
       "phases": {
         "train_mlip": {
-          "status": "active",
+          "status": "done",
           "fits_total": 5,
-          "fits_done": 3,
+          "fits_done": 5,
           "fits_failed": 0,
           "epochs": [
+            200,
+            200,
             200,
             200,
             200
@@ -37,21 +39,23 @@
           "max_epochs": 200
         },
         "generate_structures": {
-          "status": "pending",
+          "status": "active",
           "candidates_target": 500,
-          "selected_target": 100
+          "selected_target": 100,
+          "md_runs_done": 0,
+          "md_runs_total": 25
         },
         "high_accuracy_eval": {
           "status": "pending"
         }
       },
       "best_model": {
-        "loop": 43,
+        "loop": 44,
         "trainer": "mace",
         "split": "test",
-        "mae_e_mev_per_atom": 189.11,
-        "mae_f_mev_per_a": 472.9,
-        "n_structures": 90
+        "mae_e_mev_per_atom": 144.0,
+        "mae_f_mev_per_a": 346.3,
+        "n_structures": 96
       },
       "report_loop": 43,
       "id": "yun_an",
