@@ -4,7 +4,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-10-29T14:06:21+01:00",
+      "updated_at": "2026-10-29T15:00:14+01:00",
       "state": "running",
       "workflow": "committee_uncertainty",
       "elements": [
@@ -50,9 +50,9 @@
         "high_accuracy_eval": {
           "status": "active",
           "total": 55,
-          "done": 36,
+          "done": 37,
           "succeeded": 25,
-          "failed": 11
+          "failed": 12
         }
       },
       "best_model": {
@@ -73,7 +73,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-10-29T14:59:59+01:00",
+      "updated_at": "2026-10-29T15:03:46+01:00",
       "state": "running",
       "workflow": "committee_uncertainty",
       "elements": [
@@ -93,7 +93,6 @@
           "status": "done",
           "fits_total": 3,
           "fits_done": 3,
-          "fits_failed": 0,
           "epochs": [
             300,
             300,
@@ -106,16 +105,14 @@
           "candidates_target": 1000,
           "selected_target": 100,
           "candidates": 1000,
-          "md_runs_done": 50,
-          "md_runs_total": 51,
           "selected": 100
         },
         "high_accuracy_eval": {
           "status": "active",
           "total": 100,
-          "done": 19,
+          "done": 0,
           "succeeded": 0,
-          "failed": 19
+          "failed": 0
         }
       },
       "best_model": {
