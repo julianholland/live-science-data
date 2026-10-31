@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "kind": "alomancy",
-  "updated_at": "2026-10-31T02:17:57+01:00",
+  "updated_at": "2026-10-31T05:08:01+01:00",
   "state": "running",
   "workflow": "committee_uncertainty",
   "elements": [
