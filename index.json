@@ -4,7 +4,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-10-31T18:29:54+01:00",
+      "updated_at": "2026-10-31T18:57:03+01:00",
       "state": "running",
       "workflow": "committee_uncertainty",
       "elements": [
@@ -28,7 +28,6 @@
           "status": "done",
           "fits_total": 5,
           "fits_done": 5,
-          "fits_failed": 0,
           "epochs": [
             200,
             200,
@@ -43,16 +42,14 @@
           "candidates_target": 500,
           "selected_target": 100,
           "candidates": 500,
-          "md_runs_done": 25,
-          "md_runs_total": 25,
           "selected": 100
         },
         "high_accuracy_eval": {
           "status": "active",
           "total": 100,
-          "done": 2,
+          "done": 0,
           "succeeded": 0,
-          "failed": 2
+          "failed": 0
         }
       },
       "best_model": {
@@ -73,7 +70,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-10-31T15:20:33+01:00",
+      "updated_at": "2026-10-31T18:52:48+01:00",
       "state": "running",
       "workflow": "committee_uncertainty",
       "elements": [
@@ -110,8 +107,8 @@
         "high_accuracy_eval": {
           "status": "active",
           "total": 100,
-          "done": 28,
-          "succeeded": 28,
+          "done": 29,
+          "succeeded": 29,
           "failed": 0
         }
       },
