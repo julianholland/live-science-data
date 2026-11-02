@@ -68,7 +68,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-02T06:20:40+01:00",
+      "updated_at": "2026-11-02T06:39:42+01:00",
       "state": "running",
       "workflow": "committee_uncertainty",
       "elements": [
@@ -78,36 +78,26 @@
       "generator": "md",
       "evaluator": "qe",
       "loop": {
-        "current": 0,
+        "current": 1,
         "total": 5,
-        "completed": 0
+        "completed": 1
       },
-      "phase": "high_accuracy_eval",
+      "phase": "train_mlip",
       "phases": {
         "train_mlip": {
-          "status": "done",
+          "status": "active",
           "fits_total": 3,
-          "fits_done": 3,
-          "epochs": [
-            300,
-            300,
-            300
-          ],
-          "max_epochs": 300
+          "fits_done": 0,
+          "fits_failed": 0,
+          "max_epochs": null
         },
         "generate_structures": {
-          "status": "done",
+          "status": "pending",
           "candidates_target": 1000,
-          "selected_target": 100,
-          "candidates": 1000,
-          "selected": 100
+          "selected_target": 100
         },
         "high_accuracy_eval": {
-          "status": "active",
-          "total": 100,
-          "done": 99,
-          "succeeded": 99,
-          "failed": 0
+          "status": "pending"
         }
       },
       "best_model": {
@@ -118,12 +108,12 @@
         "mae_f_mev_per_a": 230.5,
         "n_structures": 432
       },
-      "report_loop": null,
+      "report_loop": 0,
       "id": "good_c",
       "title": "Carbon",
       "description": "Active learning of a MACE potential for carbon, used as an example system for the ALomancy paper.",
       "gif": "structures.gif",
-      "report": null
+      "report": "report/report.md"
     }
   ]
 }
