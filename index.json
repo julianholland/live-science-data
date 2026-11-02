@@ -73,7 +73,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-02T08:04:28+01:00",
+      "updated_at": "2026-11-02T09:17:30+01:00",
       "state": "running",
       "workflow": "committee_uncertainty",
       "elements": [
@@ -87,35 +87,38 @@
         "total": 5,
         "completed": 1
       },
-      "phase": "train_mlip",
+      "phase": "generate_structures",
       "phases": {
         "train_mlip": {
-          "status": "active",
+          "status": "done",
           "fits_total": 3,
-          "fits_done": 2,
+          "fits_done": 3,
           "fits_failed": 0,
           "epochs": [
+            300,
             300,
             300
           ],
           "max_epochs": 300
         },
         "generate_structures": {
-          "status": "pending",
+          "status": "active",
           "candidates_target": 1000,
-          "selected_target": 100
+          "selected_target": 100,
+          "md_runs_done": 0,
+          "md_runs_total": 50
         },
         "high_accuracy_eval": {
           "status": "pending"
         }
       },
       "best_model": {
-        "loop": 0,
+        "loop": 1,
         "trainer": "mace",
         "split": "test",
-        "mae_e_mev_per_atom": 24.31,
-        "mae_f_mev_per_a": 230.5,
-        "n_structures": 432
+        "mae_e_mev_per_atom": 31.54,
+        "mae_f_mev_per_a": 218.5,
+        "n_structures": 442
       },
       "report_loop": 0,
       "id": "good_c",
