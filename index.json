@@ -4,7 +4,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-03T21:27:23+01:00",
+      "updated_at": "2026-11-03T21:57:48+01:00",
       "state": "running",
       "workflow": "committee_uncertainty",
       "elements": [
@@ -47,8 +47,8 @@
         "high_accuracy_eval": {
           "status": "active",
           "total": 100,
-          "done": 20,
-          "succeeded": 7,
+          "done": 25,
+          "succeeded": 12,
           "failed": 13
         }
       },
@@ -70,7 +70,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-03T21:21:49+01:00",
+      "updated_at": "2026-11-03T21:51:42+01:00",
       "state": "running",
       "workflow": "committee_uncertainty",
       "elements": [
@@ -109,8 +109,8 @@
         "high_accuracy_eval": {
           "status": "active",
           "total": 100,
-          "done": 2,
-          "succeeded": 2,
+          "done": 6,
+          "succeeded": 6,
           "failed": 0
         }
       },
@@ -132,7 +132,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-03T21:29:33+01:00",
+      "updated_at": "2026-11-03T21:56:57+01:00",
       "state": "running",
       "workflow": "novelty_selection",
       "elements": [
@@ -146,7 +146,7 @@
         "total": 1,
         "completed": 0
       },
-      "phase": "generate_structures",
+      "phase": "high_accuracy_eval",
       "phases": {
         "train_mlip": {
           "status": "done",
@@ -159,14 +159,19 @@
           "max_epochs": 50
         },
         "generate_structures": {
-          "status": "active",
+          "status": "done",
           "candidates_target": 100,
           "selected_target": 10,
-          "md_runs_done": 18,
+          "candidates": 100,
+          "md_runs_done": 50,
           "md_runs_total": 50
         },
         "high_accuracy_eval": {
-          "status": "pending"
+          "status": "active",
+          "total": 10,
+          "done": 0,
+          "succeeded": 0,
+          "failed": 0
         }
       },
       "best_model": {
