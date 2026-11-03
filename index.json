@@ -70,7 +70,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-03T17:55:33+01:00",
+      "updated_at": "2026-11-03T18:21:46+01:00",
       "state": "running",
       "workflow": "committee_uncertainty",
       "elements": [
@@ -101,7 +101,7 @@
           "status": "active",
           "candidates_target": 1000,
           "selected_target": 100,
-          "md_runs_done": 40,
+          "md_runs_done": 42,
           "md_runs_total": 44
         },
         "high_accuracy_eval": {
@@ -122,6 +122,49 @@
       "description": "Active learning of a MACE potential for carbon, used as an example system for the ALomancy paper.",
       "gif": "structures.gif",
       "report": "report/report.md"
+    },
+    {
+      "schema": 1,
+      "kind": "alomancy",
+      "updated_at": "2026-11-03T17:17:21+01:00",
+      "state": "running",
+      "workflow": "novelty_selection",
+      "elements": [
+        "C"
+      ],
+      "trainer": null,
+      "generator": null,
+      "evaluator": null,
+      "loop": {
+        "current": 0,
+        "total": 1,
+        "completed": 0
+      },
+      "phase": "train_mlip",
+      "phases": {
+        "train_mlip": {
+          "status": "active",
+          "fits_total": 1,
+          "fits_done": 0,
+          "fits_failed": 0,
+          "max_epochs": 50
+        },
+        "generate_structures": {
+          "status": "pending",
+          "candidates_target": 100,
+          "selected_target": 10
+        },
+        "high_accuracy_eval": {
+          "status": "pending"
+        }
+      },
+      "best_model": null,
+      "report_loop": null,
+      "id": "fine_tune_good_c",
+      "title": "Carbon Fine-tune",
+      "description": "Carbon structures used to fine tune a model",
+      "gif": "structures.gif",
+      "report": null
     }
   ]
 }
