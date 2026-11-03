@@ -4,7 +4,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-03T23:58:36+01:00",
+      "updated_at": "2026-11-04T00:28:34+01:00",
       "state": "running",
       "workflow": "committee_uncertainty",
       "elements": [
@@ -47,8 +47,8 @@
         "high_accuracy_eval": {
           "status": "active",
           "total": 100,
-          "done": 58,
-          "succeeded": 41,
+          "done": 68,
+          "succeeded": 51,
           "failed": 17
         }
       },
@@ -70,7 +70,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-03T23:59:22+01:00",
+      "updated_at": "2026-11-04T00:26:23+01:00",
       "state": "running",
       "workflow": "committee_uncertainty",
       "elements": [
@@ -109,9 +109,9 @@
         "high_accuracy_eval": {
           "status": "active",
           "total": 100,
-          "done": 33,
-          "succeeded": 32,
-          "failed": 1
+          "done": 46,
+          "succeeded": 44,
+          "failed": 2
         }
       },
       "best_model": {
@@ -132,7 +132,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-03T21:56:57+01:00",
+      "updated_at": "2026-11-04T00:29:50+01:00",
       "state": "running",
       "workflow": "novelty_selection",
       "elements": [
@@ -169,8 +169,8 @@
         "high_accuracy_eval": {
           "status": "active",
           "total": 10,
-          "done": 0,
-          "succeeded": 0,
+          "done": 1,
+          "succeeded": 1,
           "failed": 0
         }
       },
