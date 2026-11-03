@@ -73,7 +73,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-02T10:35:26+01:00",
+      "updated_at": "2026-11-03T09:18:15+01:00",
       "state": "running",
       "workflow": "committee_uncertainty",
       "elements": [
@@ -93,7 +93,6 @@
           "status": "done",
           "fits_total": 3,
           "fits_done": 3,
-          "fits_failed": 0,
           "epochs": [
             300,
             300,
@@ -105,8 +104,8 @@
           "status": "active",
           "candidates_target": 1000,
           "selected_target": 100,
-          "md_runs_done": 6,
-          "md_runs_total": 50
+          "md_runs_done": 0,
+          "md_runs_total": 44
         },
         "high_accuracy_eval": {
           "status": "pending"
