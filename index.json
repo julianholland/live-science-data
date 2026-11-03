@@ -4,7 +4,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-03T20:42:26+01:00",
+      "updated_at": "2026-11-03T21:27:23+01:00",
       "state": "running",
       "workflow": "committee_uncertainty",
       "elements": [
@@ -47,9 +47,9 @@
         "high_accuracy_eval": {
           "status": "active",
           "total": 100,
-          "done": 15,
-          "succeeded": 5,
-          "failed": 10
+          "done": 20,
+          "succeeded": 7,
+          "failed": 13
         }
       },
       "best_model": {
@@ -70,7 +70,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-03T18:50:50+01:00",
+      "updated_at": "2026-11-03T21:21:49+01:00",
       "state": "running",
       "workflow": "committee_uncertainty",
       "elements": [
@@ -109,8 +109,8 @@
         "high_accuracy_eval": {
           "status": "active",
           "total": 100,
-          "done": 0,
-          "succeeded": 0,
+          "done": 2,
+          "succeeded": 2,
           "failed": 0
         }
       },
@@ -132,7 +132,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-03T17:17:21+01:00",
+      "updated_at": "2026-11-03T21:29:33+01:00",
       "state": "running",
       "workflow": "novelty_selection",
       "elements": [
@@ -146,25 +146,37 @@
         "total": 1,
         "completed": 0
       },
-      "phase": "train_mlip",
+      "phase": "generate_structures",
       "phases": {
         "train_mlip": {
-          "status": "active",
+          "status": "done",
           "fits_total": 1,
-          "fits_done": 0,
+          "fits_done": 1,
           "fits_failed": 0,
+          "epochs": [
+            50
+          ],
           "max_epochs": 50
         },
         "generate_structures": {
-          "status": "pending",
+          "status": "active",
           "candidates_target": 100,
-          "selected_target": 10
+          "selected_target": 10,
+          "md_runs_done": 18,
+          "md_runs_total": 50
         },
         "high_accuracy_eval": {
           "status": "pending"
         }
       },
-      "best_model": null,
+      "best_model": {
+        "loop": 0,
+        "trainer": "mace",
+        "split": "test",
+        "mae_e_mev_per_atom": 38.39,
+        "mae_f_mev_per_a": 415.8,
+        "n_structures": 442
+      },
       "report_loop": null,
       "id": "fine_tune_good_c",
       "title": "Carbon Fine-tune",

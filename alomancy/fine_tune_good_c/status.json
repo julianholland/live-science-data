@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "kind": "alomancy",
-  "updated_at": "2026-11-03T17:17:21+01:00",
+  "updated_at": "2026-11-03T21:29:33+01:00",
   "state": "running",
   "workflow": "novelty_selection",
   "elements": [
@@ -15,25 +15,37 @@
     "total": 1,
     "completed": 0
   },
-  "phase": "train_mlip",
+  "phase": "generate_structures",
   "phases": {
     "train_mlip": {
-      "status": "active",
+      "status": "done",
       "fits_total": 1,
-      "fits_done": 0,
+      "fits_done": 1,
       "fits_failed": 0,
+      "epochs": [
+        50
+      ],
       "max_epochs": 50
     },
     "generate_structures": {
-      "status": "pending",
+      "status": "active",
       "candidates_target": 100,
-      "selected_target": 10
+      "selected_target": 10,
+      "md_runs_done": 18,
+      "md_runs_total": 50
     },
     "high_accuracy_eval": {
       "status": "pending"
     }
   },
-  "best_model": null,
+  "best_model": {
+    "loop": 0,
+    "trainer": "mace",
+    "split": "test",
+    "mae_e_mev_per_atom": 38.39,
+    "mae_f_mev_per_a": 415.8,
+    "n_structures": 442
+  },
   "report_loop": null,
   "id": "fine_tune_good_c",
   "title": "Carbon Fine-tune",
