@@ -4,7 +4,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-04T01:27:50+01:00",
+      "updated_at": "2026-11-04T01:59:28+01:00",
       "state": "running",
       "workflow": "committee_uncertainty",
       "elements": [
@@ -47,8 +47,8 @@
         "high_accuracy_eval": {
           "status": "active",
           "total": 100,
-          "done": 85,
-          "succeeded": 68,
+          "done": 89,
+          "succeeded": 72,
           "failed": 17
         }
       },
@@ -70,7 +70,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-04T01:27:57+01:00",
+      "updated_at": "2026-11-04T01:59:51+01:00",
       "state": "running",
       "workflow": "committee_uncertainty",
       "elements": [
@@ -109,8 +109,8 @@
         "high_accuracy_eval": {
           "status": "active",
           "total": 100,
-          "done": 75,
-          "succeeded": 71,
+          "done": 84,
+          "succeeded": 80,
           "failed": 4
         }
       },
@@ -132,8 +132,8 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-04T01:19:09+01:00",
-      "state": "running",
+      "updated_at": "2026-11-04T01:59:27+01:00",
+      "state": "finished",
       "workflow": "novelty_selection",
       "elements": [
         "C"
@@ -142,36 +142,26 @@
       "generator": null,
       "evaluator": null,
       "loop": {
-        "current": 0,
+        "current": 1,
         "total": 1,
-        "completed": 0
+        "completed": 1
       },
-      "phase": "high_accuracy_eval",
+      "phase": "done",
       "phases": {
         "train_mlip": {
           "status": "done",
           "fits_total": 1,
-          "fits_done": 1,
+          "fits_done": 0,
           "fits_failed": 0,
-          "epochs": [
-            50
-          ],
           "max_epochs": 50
         },
         "generate_structures": {
           "status": "done",
           "candidates_target": 100,
-          "selected_target": 10,
-          "candidates": 100,
-          "md_runs_done": 50,
-          "md_runs_total": 50
+          "selected_target": 10
         },
         "high_accuracy_eval": {
-          "status": "active",
-          "total": 10,
-          "done": 9,
-          "succeeded": 7,
-          "failed": 2
+          "status": "done"
         }
       },
       "best_model": {
@@ -182,12 +172,12 @@
         "mae_f_mev_per_a": 415.8,
         "n_structures": 442
       },
-      "report_loop": null,
+      "report_loop": 0,
       "id": "fine_tune_good_c",
       "title": "Carbon Fine-tune",
       "description": "Carbon structures used to fine tune a model",
       "gif": "structures.gif",
-      "report": null
+      "report": "report/report.md"
     }
   ]
 }
