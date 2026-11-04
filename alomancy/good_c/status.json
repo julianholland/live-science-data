@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "kind": "alomancy",
-  "updated_at": "2026-11-04T18:51:02+01:00",
+  "updated_at": "2026-11-04T19:17:47+01:00",
   "state": "running",
   "workflow": "committee_uncertainty",
   "elements": [
@@ -33,7 +33,7 @@
       "status": "active",
       "candidates_target": 1000,
       "selected_target": 100,
-      "md_runs_done": 21,
+      "md_runs_done": 24,
       "md_runs_total": 50
     },
     "high_accuracy_eval": {
