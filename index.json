@@ -4,7 +4,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-04T01:59:28+01:00",
+      "updated_at": "2026-11-04T02:29:21+01:00",
       "state": "running",
       "workflow": "committee_uncertainty",
       "elements": [
@@ -18,38 +18,24 @@
       "generator": "md",
       "evaluator": "qe",
       "loop": {
-        "current": 48,
+        "current": 49,
         "total": 50,
-        "completed": 48
+        "completed": 49
       },
-      "phase": "high_accuracy_eval",
+      "phase": "train_mlip",
       "phases": {
         "train_mlip": {
-          "status": "done",
+          "status": "active",
           "fits_total": 5,
-          "fits_done": 5,
-          "epochs": [
-            200,
-            200,
-            200,
-            200,
-            200
-          ],
           "max_epochs": 200
         },
         "generate_structures": {
-          "status": "done",
+          "status": "pending",
           "candidates_target": 500,
-          "selected_target": 100,
-          "candidates": 500,
-          "selected": 100
+          "selected_target": 100
         },
         "high_accuracy_eval": {
-          "status": "active",
-          "total": 100,
-          "done": 89,
-          "succeeded": 72,
-          "failed": 17
+          "status": "pending"
         }
       },
       "best_model": {
@@ -70,7 +56,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-04T01:59:51+01:00",
+      "updated_at": "2026-11-04T02:09:12+01:00",
       "state": "running",
       "workflow": "committee_uncertainty",
       "elements": [
@@ -109,8 +95,8 @@
         "high_accuracy_eval": {
           "status": "active",
           "total": 100,
-          "done": 84,
-          "succeeded": 80,
+          "done": 86,
+          "succeeded": 82,
           "failed": 4
         }
       },
