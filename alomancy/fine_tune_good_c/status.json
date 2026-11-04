@@ -44,7 +44,7 @@
     "mae_f_mev_per_a": 415.7,
     "n_structures": 444
   },
-  "report_loop": 0,
+  "report_loop": 1,
   "id": "fine_tune_good_c",
   "title": "Carbon Fine-tune",
   "description": "Carbon structures used to fine tune a model",
