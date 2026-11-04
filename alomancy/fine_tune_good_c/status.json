@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "kind": "alomancy",
-  "updated_at": "2026-11-04T01:59:27+01:00",
+  "updated_at": "2026-11-04T04:29:58+01:00",
   "state": "finished",
   "workflow": "novelty_selection",
   "elements": [
@@ -20,8 +20,11 @@
     "train_mlip": {
       "status": "done",
       "fits_total": 1,
-      "fits_done": 0,
+      "fits_done": 1,
       "fits_failed": 0,
+      "epochs": [
+        50
+      ],
       "max_epochs": 50
     },
     "generate_structures": {
@@ -34,12 +37,12 @@
     }
   },
   "best_model": {
-    "loop": 0,
+    "loop": 1,
     "trainer": "mace",
     "split": "test",
-    "mae_e_mev_per_atom": 38.39,
-    "mae_f_mev_per_a": 415.8,
-    "n_structures": 442
+    "mae_e_mev_per_atom": 33.68,
+    "mae_f_mev_per_a": 415.7,
+    "n_structures": 444
   },
   "report_loop": 0,
   "id": "fine_tune_good_c",
