@@ -4,8 +4,8 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-05T08:19:54+01:00",
-      "state": "stalled",
+      "updated_at": "2026-11-06T10:10:28+01:00",
+      "state": "finished",
       "workflow": "committee_uncertainty",
       "elements": [
         "Li",
@@ -18,41 +18,26 @@
       "generator": "md",
       "evaluator": "qe",
       "loop": {
-        "current": 49,
+        "current": 50,
         "total": 50,
-        "completed": 49
+        "completed": 50
       },
-      "phase": "high_accuracy_eval",
+      "phase": "done",
       "phases": {
         "train_mlip": {
           "status": "done",
           "fits_total": 5,
-          "fits_done": 5,
+          "fits_done": 0,
           "fits_failed": 0,
-          "epochs": [
-            200,
-            200,
-            200,
-            200,
-            200
-          ],
           "max_epochs": 200
         },
         "generate_structures": {
           "status": "done",
           "candidates_target": 500,
-          "selected_target": 100,
-          "candidates": 500,
-          "md_runs_done": 25,
-          "md_runs_total": 25,
-          "selected": 100
+          "selected_target": 100
         },
         "high_accuracy_eval": {
-          "status": "active",
-          "total": 100,
-          "done": 95,
-          "succeeded": 71,
-          "failed": 24
+          "status": "done"
         }
       },
       "best_model": {
@@ -63,7 +48,7 @@
         "mae_f_mev_per_a": 246.9,
         "n_structures": 120
       },
-      "report_loop": 48,
+      "report_loop": 49,
       "id": "yun_an",
       "title": "Li–B–I–P–S solid electrolytes",
       "description": "Committee-uncertainty active learning of a MACE potential for lithium thioborophosphate-iodide solid electrolytes, using MD exploration and Quantum ESPRESSO labelling.",
@@ -73,8 +58,8 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-05T08:19:50+01:00",
-      "state": "stalled",
+      "updated_at": "2026-11-06T10:09:35+01:00",
+      "state": "running",
       "workflow": "committee_uncertainty",
       "elements": [
         "C"
@@ -83,39 +68,26 @@
       "generator": "md",
       "evaluator": "qe",
       "loop": {
-        "current": 2,
+        "current": 3,
         "total": 5,
-        "completed": 2
+        "completed": 3
       },
-      "phase": "high_accuracy_eval",
+      "phase": "train_mlip",
       "phases": {
         "train_mlip": {
-          "status": "done",
+          "status": "active",
           "fits_total": 3,
-          "fits_done": 3,
+          "fits_done": 0,
           "fits_failed": 0,
-          "epochs": [
-            300,
-            300,
-            300
-          ],
-          "max_epochs": 300
+          "max_epochs": null
         },
         "generate_structures": {
-          "status": "done",
+          "status": "pending",
           "candidates_target": 1000,
-          "selected_target": 100,
-          "candidates": 1000,
-          "md_runs_done": 50,
-          "md_runs_total": 50,
-          "selected": 100
+          "selected_target": 100
         },
         "high_accuracy_eval": {
-          "status": "active",
-          "total": 100,
-          "done": 96,
-          "succeeded": 95,
-          "failed": 1
+          "status": "pending"
         }
       },
       "best_model": {
@@ -126,7 +98,7 @@
         "mae_f_mev_per_a": 205.7,
         "n_structures": 461
       },
-      "report_loop": 1,
+      "report_loop": 2,
       "id": "good_c",
       "title": "Carbon",
       "description": "Active learning of a MACE potential for carbon, used as an example system for the ALomancy paper.",
