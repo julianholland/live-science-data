@@ -2,7 +2,7 @@
   "schema": 1,
   "kind": "alomancy",
   "updated_at": "2026-11-05T08:19:54+01:00",
-  "state": "running",
+  "state": "stalled",
   "workflow": "committee_uncertainty",
   "elements": [
     "Li",
