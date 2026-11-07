@@ -4,7 +4,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-07T02:10:09+01:00",
+      "updated_at": "2026-11-07T03:19:03+01:00",
       "state": "running",
       "workflow": "committee_uncertainty",
       "elements": [
@@ -41,7 +41,7 @@
           "status": "active",
           "candidates_target": 1000,
           "selected_target": 100,
-          "md_runs_done": 27,
+          "md_runs_done": 28,
           "md_runs_total": 30
         },
         "high_accuracy_eval": {
@@ -66,7 +66,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-07T02:59:36+01:00",
+      "updated_at": "2026-11-07T03:24:31+01:00",
       "state": "running",
       "workflow": "committee_uncertainty",
       "elements": [
@@ -80,7 +80,7 @@
         "total": 5,
         "completed": 3
       },
-      "phase": "generate_structures",
+      "phase": "high_accuracy_eval",
       "phases": {
         "train_mlip": {
           "status": "done",
@@ -95,14 +95,20 @@
           "max_epochs": 300
         },
         "generate_structures": {
-          "status": "active",
+          "status": "done",
           "candidates_target": 1000,
           "selected_target": 100,
+          "candidates": 1000,
           "md_runs_done": 50,
-          "md_runs_total": 50
+          "md_runs_total": 50,
+          "selected": 100
         },
         "high_accuracy_eval": {
-          "status": "pending"
+          "status": "active",
+          "total": 100,
+          "done": 27,
+          "succeeded": 27,
+          "failed": 0
         }
       },
       "best_model": {
