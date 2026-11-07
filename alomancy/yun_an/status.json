@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "kind": "alomancy",
-  "updated_at": "2026-11-07T04:03:33+01:00",
+  "updated_at": "2026-11-07T06:59:58+01:00",
   "state": "running",
   "workflow": "committee_uncertainty",
   "elements": [
@@ -19,7 +19,7 @@
     "total": 55,
     "completed": 50
   },
-  "phase": "generate_structures",
+  "phase": "high_accuracy_eval",
   "phases": {
     "train_mlip": {
       "status": "done",
@@ -35,15 +35,20 @@
       "max_epochs": 200
     },
     "generate_structures": {
-      "status": "active",
+      "status": "done",
       "candidates_target": 1000,
       "selected_target": 100,
       "candidates": 1000,
       "md_runs_done": 30,
-      "md_runs_total": 30
+      "md_runs_total": 30,
+      "selected": 100
     },
     "high_accuracy_eval": {
-      "status": "pending"
+      "status": "active",
+      "total": 100,
+      "done": 2,
+      "succeeded": 0,
+      "failed": 2
     }
   },
   "best_model": {
