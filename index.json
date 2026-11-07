@@ -4,7 +4,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-07T11:56:11+01:00",
+      "updated_at": "2026-11-07T12:24:25+01:00",
       "state": "running",
       "workflow": "committee_uncertainty",
       "elements": [
@@ -49,8 +49,8 @@
         "high_accuracy_eval": {
           "status": "active",
           "total": 100,
-          "done": 35,
-          "succeeded": 27,
+          "done": 41,
+          "succeeded": 33,
           "failed": 8
         }
       },
