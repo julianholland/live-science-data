@@ -4,7 +4,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-07T16:20:18+01:00",
+      "updated_at": "2026-11-07T16:59:00+01:00",
       "state": "running",
       "workflow": "committee_uncertainty",
       "elements": [
@@ -49,9 +49,9 @@
         "high_accuracy_eval": {
           "status": "active",
           "total": 100,
-          "done": 94,
-          "succeeded": 83,
-          "failed": 11
+          "done": 96,
+          "succeeded": 84,
+          "failed": 12
         }
       },
       "best_model": {
@@ -72,7 +72,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-07T14:56:08+01:00",
+      "updated_at": "2026-11-07T16:54:07+01:00",
       "state": "running",
       "workflow": "committee_uncertainty",
       "elements": [
@@ -86,31 +86,38 @@
         "total": 5,
         "completed": 4
       },
-      "phase": "train_mlip",
+      "phase": "generate_structures",
       "phases": {
         "train_mlip": {
-          "status": "active",
+          "status": "done",
           "fits_total": 3,
-          "fits_done": 0,
+          "fits_done": 3,
           "fits_failed": 0,
-          "max_epochs": null
+          "epochs": [
+            300,
+            300,
+            300
+          ],
+          "max_epochs": 300
         },
         "generate_structures": {
-          "status": "pending",
+          "status": "active",
           "candidates_target": 1000,
-          "selected_target": 100
+          "selected_target": 100,
+          "md_runs_done": 0,
+          "md_runs_total": 50
         },
         "high_accuracy_eval": {
           "status": "pending"
         }
       },
       "best_model": {
-        "loop": 3,
+        "loop": 4,
         "trainer": "mace",
         "split": "test",
-        "mae_e_mev_per_atom": 21.88,
-        "mae_f_mev_per_a": 204.6,
-        "n_structures": 480
+        "mae_e_mev_per_atom": 20.86,
+        "mae_f_mev_per_a": 201.2,
+        "n_structures": 500
       },
       "report_loop": 3,
       "id": "good_c",
