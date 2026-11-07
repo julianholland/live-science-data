@@ -28,6 +28,8 @@
       "fits_failed": 0,
       "epochs": [
         300,
+        300,
+        300,
         300
       ],
       "max_epochs": 300

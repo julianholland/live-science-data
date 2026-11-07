@@ -31,6 +31,8 @@
           "fits_failed": 0,
           "epochs": [
             300,
+            300,
+            300,
             300
           ],
           "max_epochs": 300
@@ -62,7 +64,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-07T23:00:02+01:00",
+      "updated_at": "2026-11-07T23:23:51+01:00",
       "state": "running",
       "workflow": "committee_uncertainty",
       "elements": [
@@ -102,8 +104,8 @@
         "high_accuracy_eval": {
           "status": "active",
           "total": 100,
-          "done": 4,
-          "succeeded": 4,
+          "done": 60,
+          "succeeded": 60,
           "failed": 0
         }
       },
