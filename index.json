@@ -4,7 +4,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-07T16:59:00+01:00",
+      "updated_at": "2026-11-07T17:01:13+01:00",
       "state": "running",
       "workflow": "committee_uncertainty",
       "elements": [
@@ -49,9 +49,9 @@
         "high_accuracy_eval": {
           "status": "active",
           "total": 100,
-          "done": 96,
+          "done": 97,
           "succeeded": 84,
-          "failed": 12
+          "failed": 13
         }
       },
       "best_model": {
@@ -72,7 +72,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-07T16:54:07+01:00",
+      "updated_at": "2026-11-07T17:26:11+01:00",
       "state": "running",
       "workflow": "committee_uncertainty",
       "elements": [
@@ -104,7 +104,7 @@
           "status": "active",
           "candidates_target": 1000,
           "selected_target": 100,
-          "md_runs_done": 0,
+          "md_runs_done": 4,
           "md_runs_total": 50
         },
         "high_accuracy_eval": {
