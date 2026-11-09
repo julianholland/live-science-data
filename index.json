@@ -4,7 +4,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-09T09:27:56+01:00",
+      "updated_at": "2026-11-09T10:46:12+01:00",
       "state": "running",
       "workflow": "committee_uncertainty",
       "elements": [
@@ -27,9 +27,11 @@
         "train_mlip": {
           "status": "active",
           "fits_total": 5,
-          "fits_done": 2,
+          "fits_done": 4,
           "fits_failed": 0,
           "epochs": [
+            300,
+            300,
             300,
             300
           ],
