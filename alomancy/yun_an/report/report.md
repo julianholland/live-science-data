@@ -1,25 +1,29 @@
-# ALomancy report: al_loop_50
+# ALomancy report: al_loop_51
 
-Workflow `committee_uncertainty` · trainer `mace` · generator `md` · evaluator `qe` · generated 2026-11-06T12:56:04
+Workflow `committee_uncertainty` · trainer `mace` · generator `md` · evaluator `qe` · generated 2026-11-09T06:28:48
 
-**Status:** ✓ no issues · 0 warning(s) logged
+**Status:** ✖ 2 errors · ⚠ 2 warnings · 💡 1 info · 17 warning(s) logged
 
 ## Headline
 
-| | loop 49 | loop 50 | change |
+| | loop 50 | loop 51 | change |
 |---|---:|---:|---:|
-| Best model test force MAE (eV/Å) | 0.247 | 0.298 | +21% |
-| Best model test energy MAE (meV/atom) | 139 | 141 | +1% |
-| Training structures | 2.23e+03 | 2.23e+03 | +0% |
-| Test structures | 130 | 130 | +0% |
-| New structures this loop | 76 | 0 | -100% |
-| Warnings / errors logged | 31 | 0 | -100% |
+| Best model test force MAE (eV/Å) | 0.298 | 0.341 | +14% |
+| Best model test energy MAE (meV/atom) | 141 | 126 | -11% |
+| Training structures | 2.32e+03 | 2.41e+03 | +4% |
+| Test structures | 142 | 152 | +7% |
+| New structures this loop | 86 | 92 | +7% |
+| Warnings / errors logged | 28 | 17 | -39% |
 
-Best model: fit_1 of 5 (chosen on the `valid` split).
+Best model: fit_4 of 5 (chosen on the `valid` split).
 
 ## Issues & suggestions
 
-No issues detected.
+- ✖ **remote_jobs_failed**: 13/141 remote jobs (9%) failed (8) or died (5). Check the job logs (results/alomancy.log has each failure's traceback); jobs killed by the scheduler usually need a longer max_time for that phase, or a partition with more memory.
+- ✖ **dft_partial_failure**: 8/100 structures sent to DFT (8%) came back without a result. Check the DFT output in results/<loop>/high_accuracy_evaluation; raise high_accuracy_evaluation.max_time / max_go_time if jobs timed out.
+- ⚠ **go_not_converged**: 14/92 geometry optimisations (15%) stopped at the step budget (200 steps) before reaching the force ceiling. Raise high_accuracy_evaluation.max_num_of_relax_steps, or raise high_accuracy_evaluation.force_ceiling (now 0.05 eV/Å) so they stop earlier. Non-converged structures are still kept as training data.
+- ⚠ **short_bond_excluded**: 3191/7150 structures (45%) were dropped for a bond shorter than 0.5 Å. The model is driving MD into collisions: lower md_kwargs.temperature or md_kwargs.timestep_fs, or add more short-range initialization data (dimers/trimers).
+- 💡 **overfitting**: The best model's test force MAE (0.341 eV/Å) is 2.3x its training MAE (0.146 eV/Å). The test set covers configurations training doesn't: keep adding data, or raise general.dataset_kwargs.valid_fraction to select models on held-out data.
 
 ## Trends
 
@@ -39,7 +43,8 @@ No issues detected.
 | 47 | 0.373 | 2085 | 30 | 30/45 | 73% | 0 | 27 |
 | 48 | 0.418 | 2152 | 75 | 75/100 | 61% | 0 | 39 |
 | 49 | 0.247 | 2232 | 76 | 76/100 | 92% | 0 | 31 |
-| 50 | 0.298 | 2232 | 0 | 0 | n/a | 0 | 0 |
+| 50 | 0.298 | 2323 | 86 | 86/100 | 85% | 0 | 28 |
+| 51 | 0.341 | 2409 | 92 | 92/100 | 85% | 0 | 17 |
 
 ![Best-model MAE per loop](plots/training_al_loop_mae_plot.png)
 
@@ -49,7 +54,7 @@ No issues detected.
 
 ![Best model parity](plots/best_model_parity.png)
 
-Median relative error: train energy 3.4%, force 21.6%; test energy 1.6%, force 155.2%.
+Median relative error: train energy 2.2%, force 15.8%; test energy 2.0%, force 148.8%.
 Energies with |formation energy| < 0.05 eV/atom and atoms with |F| < 0.1 eV/Å are left out; force error is |ΔF|/|F| per atom.
 
 ![Best model percentage error](plots/best_model_percent_error.png)
@@ -59,31 +64,79 @@ Energies with |formation energy| < 0.05 eV/atom and atoms with |F| < 0.1 eV/Å a
 | config_type | Train | Test | Excluded: redundant | Excluded: quality filter | total |
 |---|---:|---:|---:|---:|---:|
 | IsolatedAtom | 5 | 0 | 0 | 0 | 5 |
-| high_sd | 831 | 114 | 28 | 591 | 1564 |
+| high_sd | 1008 | 136 | 28 | 748 | 1920 |
 | init_MP | 69 | 4 | 0 | 0 | 73 |
 | init_amorphous | 67 | 12 | 8 | 0 | 87 |
 | init_dimer | 299 | 0 | 0 | 0 | 299 |
 | init_stretch_compress | 390 | 0 | 0 | 398 | 788 |
 | init_trimer | 571 | 0 | 0 | 0 | 571 |
-| **all** | **2232** | **130** | **36** | **989** | **3387** |
+| **all** | **2409** | **152** | **36** | **1146** | **3743** |
 
-- Redundancy removal: 36 structure(s) flagged in total, 0 of this loop's 0 new.
-- Quality filters: high_force: 987, formation_energy: 324.
+- Redundancy removal: 36 structure(s) flagged in total, 0 of this loop's 92 new.
+- DFT geometry-optimisation starting frames: 92 stored this loop, 4 used (the rest excluded by the train/test filters or redundancy removal).
+- Quality filters: high_force: 1144, formation_energy: 357.
 
 ![Training set composition](plots/training_set_composition.png)
 
+### Redundancy removal
+
+Redundancy removal flags near-duplicate training structures, so the model isn't trained on many copies of the same geometry. Each structure is described by `char_vec_128`: all of its interatomic distances, sorted and resampled to 128 values (`global_descriptor/atomic_distance_descriptor.make_char_vec`). Two structures count as duplicates when the Euclidean distance between their descriptors is below a tolerance: in database order, each structure still in the training set is kept unless it is within the tolerance of one already kept. The plot sweeps that tolerance and counts how many structures are kept at each value. **We are looking for plateaus** (shaded): ranges where the count doesn't change, so the result doesn't depend on the exact tolerance. The orange line (right axis) is the number of structures removed between consecutive tolerance steps, the gradient of the count: zero on a plateau. The start of the lowest plateau at least `general.redundancy_kwargs.min_plateau_width` of the swept range wide is used (dashed line). Nothing is flagged when no plateau qualifies, or when it would flag more than `max_flagged_fraction` of the structures; `general.redundancy_kwargs.tolerance` sets the tolerance directly.
+
+- This loop: 1,180 structures probed, tolerance 0.0398, 36 flagged as duplicates (8 plateau(s) found).
+
+![Redundancy tolerance probe](plots/redundancy_tolerance_probe.png)
+
 ## DFT
 
-No DFT this loop.
+- Structures: 92 returned of 100 submitted (92 relaxed, 0 single point).
+- Geometry optimisation: 78/92 reached the force ceiling (0.05 eV/Å); steps mean 134.6, median 129, max 200 of 200 allowed.
+- Average DFT time per relaxation: 312.5 min (median 292.5, max 586.7; 92 structures).
+- Largest per-atom force after DFT: median 0.05, max 1.88 eV/Å.
+- DFT phase wall-clock: 10.3 h (mean queue time 21 min).
+
+**Structures evaluated with DFT this loop (final geometries)**
+
+![Structures evaluated with DFT this loop (final geometries)](plots/added_structures.gif)
 
 ## MLIP training: mace
 
-- Best fit (fit_1) trained for 199 epochs, stage two from epoch 160; weights kept from epoch 162.
+- Best fit (fit_4) trained for 299 epochs, stage two from epoch 240; weights kept from epoch 247.
 
 ![Best model training curve](plots/best_model_training_curve.png)
+
+## Structure generation: MD
+
+- Runs: 30 (30 completed, 1 seed(s) replaced)
+- Frames: 6224 recorded, 3690 physical (no bond < 0.5 Å, volume ≤ 3 x the seed's; 44 frame(s) cut after a run expanded past it, seed frames left out), 1000 picked as candidates, spread over each run
+- Ensemble npt, T = 300 K, timestep 0.1 fs
+
+![MD frames per run](plots/md_frames_per_run.png)
+
+![MD temperature](plots/md_temperature.png)
+
+## High-accuracy evaluation: QE
+
+![DFT geometry steps](plots/dft_geometry_steps.png)
+
+![DFT wall time](plots/dft_wall_time.png)
+
+## Selection: committee uncertainty
+
+- 269 candidates scored; 100 selected (37 %; max force std dev ≥ 0.395 eV/Å).
+
+![Committee force std dev](plots/committee_force_std_dev.png)
 
 ## Warnings and events
 
 | event | meaning | count |
 |---|---|---:|
-| `jobs_started` | remote jobs started | 1 |
+| `dft_summary` | DFT batch summary | 1 |
+| `job_died` | remote job died (killed / lost) | 5 |
+| `job_failed` | remote job failed | 8 |
+| `jobs_started` | remote jobs started | 5 |
+| `md_summary` | MD summary | 1 |
+| `md_volume_expanded` | MD runs cut after expanding past max_volume_ratio | 1 |
+| `mlip_relax_dropped` | candidates dropped by MLIP relaxation | 1 |
+| `quality_filtered` | train/test quality filter passes | 2 |
+| `redundancy_flagged` | redundancy removal passes | 1 |
+| `short_bond_excluded` | structures dropped for a short bond | 2 |
