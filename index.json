@@ -4,7 +4,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-09T11:54:57+01:00",
+      "updated_at": "2026-11-09T12:07:54+01:00",
       "state": "running",
       "workflow": "committee_uncertainty",
       "elements": [
@@ -42,7 +42,7 @@
           "status": "active",
           "candidates_target": 1000,
           "selected_target": 100,
-          "md_runs_done": 4,
+          "md_runs_done": 5,
           "md_runs_total": 30
         },
         "high_accuracy_eval": {
@@ -67,7 +67,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-09T12:00:00+01:00",
+      "updated_at": "2026-11-09T12:28:41+01:00",
       "state": "running",
       "workflow": "committee_uncertainty",
       "elements": [
@@ -81,10 +81,10 @@
         "total": 10,
         "completed": 6
       },
-      "phase": "train_mlip",
+      "phase": "generate_structures",
       "phases": {
         "train_mlip": {
-          "status": "active",
+          "status": "done",
           "fits_total": 3,
           "fits_done": 3,
           "fits_failed": 0,
@@ -96,21 +96,23 @@
           "max_epochs": 300
         },
         "generate_structures": {
-          "status": "pending",
+          "status": "active",
           "candidates_target": 1000,
-          "selected_target": 100
+          "selected_target": 100,
+          "md_runs_done": 2,
+          "md_runs_total": 50
         },
         "high_accuracy_eval": {
           "status": "pending"
         }
       },
       "best_model": {
-        "loop": 5,
+        "loop": 6,
         "trainer": "mace",
         "split": "test",
-        "mae_e_mev_per_atom": 26.53,
-        "mae_f_mev_per_a": 197.6,
-        "n_structures": 520
+        "mae_e_mev_per_atom": 18.36,
+        "mae_f_mev_per_a": 196.4,
+        "n_structures": 539
       },
       "report_loop": 5,
       "id": "good_c",
