@@ -4,7 +4,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-10T04:57:31+01:00",
+      "updated_at": "2026-11-10T07:05:09+01:00",
       "state": "running",
       "workflow": "committee_uncertainty",
       "elements": [
@@ -22,7 +22,7 @@
         "total": 55,
         "completed": 52
       },
-      "phase": "generate_structures",
+      "phase": "high_accuracy_eval",
       "phases": {
         "train_mlip": {
           "status": "done",
@@ -38,15 +38,20 @@
           "max_epochs": 300
         },
         "generate_structures": {
-          "status": "active",
+          "status": "done",
           "candidates_target": 1000,
           "selected_target": 100,
           "candidates": 1000,
           "md_runs_done": 30,
-          "md_runs_total": 30
+          "md_runs_total": 30,
+          "selected": 100
         },
         "high_accuracy_eval": {
-          "status": "pending"
+          "status": "active",
+          "total": 100,
+          "done": 0,
+          "succeeded": 0,
+          "failed": 0
         }
       },
       "best_model": {
@@ -67,7 +72,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-10T06:32:54+01:00",
+      "updated_at": "2026-11-10T07:03:21+01:00",
       "state": "running",
       "workflow": "committee_uncertainty",
       "elements": [
@@ -107,8 +112,8 @@
         "high_accuracy_eval": {
           "status": "active",
           "total": 100,
-          "done": 93,
-          "succeeded": 89,
+          "done": 94,
+          "succeeded": 90,
           "failed": 4
         }
       },
