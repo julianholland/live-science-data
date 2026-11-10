@@ -4,7 +4,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-10T10:58:42+01:00",
+      "updated_at": "2026-11-10T11:26:22+01:00",
       "state": "running",
       "workflow": "committee_uncertainty",
       "elements": [
@@ -49,8 +49,8 @@
         "high_accuracy_eval": {
           "status": "active",
           "total": 100,
-          "done": 41,
-          "succeeded": 38,
+          "done": 59,
+          "succeeded": 56,
           "failed": 3
         }
       },
@@ -72,7 +72,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-10T09:17:06+01:00",
+      "updated_at": "2026-11-10T11:24:22+01:00",
       "state": "running",
       "workflow": "committee_uncertainty",
       "elements": [
@@ -91,9 +91,13 @@
         "train_mlip": {
           "status": "active",
           "fits_total": 3,
-          "fits_done": 0,
+          "fits_done": 2,
           "fits_failed": 0,
-          "max_epochs": null
+          "epochs": [
+            300,
+            300
+          ],
+          "max_epochs": 300
         },
         "generate_structures": {
           "status": "pending",
