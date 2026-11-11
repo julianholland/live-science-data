@@ -4,7 +4,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-11T12:29:36+01:00",
+      "updated_at": "2026-11-11T12:58:36+01:00",
       "state": "running",
       "workflow": "committee_uncertainty",
       "elements": [
@@ -50,9 +50,9 @@
         "high_accuracy_eval": {
           "status": "active",
           "total": 100,
-          "done": 16,
-          "succeeded": 4,
-          "failed": 12
+          "done": 22,
+          "succeeded": 9,
+          "failed": 13
         }
       },
       "best_model": {
@@ -73,7 +73,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-11T08:11:07+01:00",
+      "updated_at": "2026-11-11T12:41:38+01:00",
       "state": "running",
       "workflow": "committee_uncertainty",
       "elements": [
@@ -87,35 +87,38 @@
         "total": 10,
         "completed": 8
       },
-      "phase": "train_mlip",
+      "phase": "generate_structures",
       "phases": {
         "train_mlip": {
-          "status": "active",
+          "status": "done",
           "fits_total": 1,
-          "fits_done": 0,
+          "fits_done": 1,
           "fits_failed": 0,
           "epochs": [
+            300,
             300,
             300
           ],
           "max_epochs": 300
         },
         "generate_structures": {
-          "status": "pending",
+          "status": "active",
           "candidates_target": 1000,
-          "selected_target": 100
+          "selected_target": 100,
+          "md_runs_done": 0,
+          "md_runs_total": 50
         },
         "high_accuracy_eval": {
           "status": "pending"
         }
       },
       "best_model": {
-        "loop": 7,
+        "loop": 8,
         "trainer": "mace",
         "split": "test",
-        "mae_e_mev_per_atom": 18.72,
-        "mae_f_mev_per_a": 196.9,
-        "n_structures": 558
+        "mae_e_mev_per_atom": 28.72,
+        "mae_f_mev_per_a": 194.5,
+        "n_structures": 564
       },
       "report_loop": 7,
       "id": "good_c",
