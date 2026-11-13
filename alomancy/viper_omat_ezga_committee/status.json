@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "kind": "alomancy",
-  "updated_at": "2026-11-13T06:59:49+01:00",
+  "updated_at": "2026-11-13T07:24:46+01:00",
   "state": "running",
   "workflow": "committee_uncertainty",
   "elements": [
@@ -15,28 +15,39 @@
     "total": 5,
     "completed": 0
   },
-  "phase": "train_mlip",
+  "phase": "generate_structures",
   "phases": {
     "train_mlip": {
-      "status": "active",
+      "status": "done",
       "fits_total": 3,
-      "fits_done": 1,
+      "fits_done": 3,
       "fits_failed": 0,
       "epochs": [
+        300,
+        300,
         300
       ],
       "max_epochs": 300
     },
     "generate_structures": {
-      "status": "pending",
+      "status": "active",
       "candidates_target": 500,
-      "selected_target": 50
+      "selected_target": 50,
+      "md_runs_done": 0,
+      "md_runs_total": 1
     },
     "high_accuracy_eval": {
       "status": "pending"
     }
   },
-  "best_model": null,
+  "best_model": {
+    "loop": 0,
+    "trainer": "mace",
+    "split": "test",
+    "mae_e_mev_per_atom": 40.42,
+    "mae_f_mev_per_a": 193.1,
+    "n_structures": 4
+  },
   "report_loop": null,
   "id": "viper_omat_ezga_committee",
   "title": "Carbon: Committee × EZGA",
