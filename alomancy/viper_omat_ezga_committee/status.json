@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "kind": "alomancy",
-  "updated_at": "2026-11-13T05:00:15+01:00",
+  "updated_at": "2026-11-13T06:59:49+01:00",
   "state": "running",
   "workflow": "committee_uncertainty",
   "elements": [
@@ -20,8 +20,11 @@
     "train_mlip": {
       "status": "active",
       "fits_total": 3,
-      "fits_done": 3,
-      "fits_failed": 3,
+      "fits_done": 1,
+      "fits_failed": 0,
+      "epochs": [
+        300
+      ],
       "max_epochs": 300
     },
     "generate_structures": {
