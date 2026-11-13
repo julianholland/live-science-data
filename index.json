@@ -4,8 +4,8 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-13T20:04:34+01:00",
-      "state": "running",
+      "updated_at": "2026-11-13T20:54:31+01:00",
+      "state": "finished",
       "workflow": "committee_uncertainty",
       "elements": [
         "Li",
@@ -18,41 +18,26 @@
       "generator": "md",
       "evaluator": "qe",
       "loop": {
-        "current": 54,
+        "current": 55,
         "total": 55,
-        "completed": 54
+        "completed": 55
       },
-      "phase": "high_accuracy_eval",
+      "phase": "done",
       "phases": {
         "train_mlip": {
           "status": "done",
           "fits_total": 5,
-          "fits_done": 5,
+          "fits_done": 0,
           "fits_failed": 0,
-          "epochs": [
-            300,
-            300,
-            300,
-            300,
-            300
-          ],
-          "max_epochs": 300
+          "max_epochs": "dynamic"
         },
         "generate_structures": {
           "status": "done",
           "candidates_target": 1000,
-          "selected_target": 100,
-          "candidates": 1000,
-          "md_runs_done": 30,
-          "md_runs_total": 30,
-          "selected": 100
+          "selected_target": 100
         },
         "high_accuracy_eval": {
-          "status": "active",
-          "total": 100,
-          "done": 99,
-          "succeeded": 76,
-          "failed": 23
+          "status": "done"
         }
       },
       "best_model": {
@@ -63,7 +48,7 @@
         "mae_f_mev_per_a": 284.7,
         "n_structures": 169
       },
-      "report_loop": 53,
+      "report_loop": 54,
       "id": "yun_an",
       "title": "Li–B–I–P–S solid electrolytes",
       "description": "Committee-uncertainty active learning of a MACE potential for lithium thioborophosphate-iodide solid electrolytes, using MD exploration and Quantum ESPRESSO labelling.",
