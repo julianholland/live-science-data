@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "kind": "alomancy",
-  "updated_at": "2026-11-14T09:15:13+01:00",
+  "updated_at": "2026-11-14T09:45:57+01:00",
   "state": "running",
   "workflow": "committee_uncertainty",
   "elements": [
@@ -11,36 +11,26 @@
   "generator": "ezga",
   "evaluator": "qe",
   "loop": {
-    "current": 0,
+    "current": 1,
     "total": 5,
-    "completed": 0
+    "completed": 1
   },
-  "phase": "high_accuracy_eval",
+  "phase": "train_mlip",
   "phases": {
     "train_mlip": {
-      "status": "done",
+      "status": "active",
       "fits_total": 3,
-      "fits_done": 3,
+      "fits_done": 0,
       "fits_failed": 0,
-      "epochs": [
-        300,
-        300,
-        300
-      ],
-      "max_epochs": 300
+      "max_epochs": "dynamic"
     },
     "generate_structures": {
-      "status": "done",
+      "status": "pending",
       "candidates_target": 500,
-      "selected_target": 50,
-      "selected": 50
+      "selected_target": 50
     },
     "high_accuracy_eval": {
-      "status": "active",
-      "total": 50,
-      "done": 49,
-      "succeeded": 48,
-      "failed": 1
+      "status": "pending"
     }
   },
   "best_model": {
@@ -51,10 +41,10 @@
     "mae_f_mev_per_a": 193.1,
     "n_structures": 4
   },
-  "report_loop": null,
+  "report_loop": 0,
   "id": "viper_omat_ezga_committee",
   "title": "Carbon: Committee × EZGA",
   "description": "Carbon MACE potential fine-tuned from the MACE-OMAT foundation model, using committee-uncertainty selection with EZGA genetic-algorithm search exploration and Quantum ESPRESSO labelling. One of six runs comparing selection strategies and structure generators for the ALomancy paper.",
   "gif": "structures.gif",
-  "report": null
+  "report": "report/report.md"
 }
