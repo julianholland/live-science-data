@@ -1,27 +1,27 @@
-# ALomancy report: al_loop_8
+# ALomancy report: al_loop_9
 
-Workflow `committee_uncertainty` · trainer `mace` · generator `md` · evaluator `qe` · generated 2026-11-13T00:36:52
+Workflow `committee_uncertainty` · trainer `mace` · generator `md` · evaluator `qe` · generated 2026-11-14T14:02:43
 
-**Status:** ✖ 2 errors · 💡 1 info · 17 warning(s) logged
+**Status:** ✖ 2 errors · 💡 1 info · 12 warning(s) logged
 
 ## Headline
 
-| | loop 7 | loop 8 | change |
+| | loop 8 | loop 9 | change |
 |---|---:|---:|---:|
-| Best model test force MAE (eV/Å) | 0.197 | 0.194 | -1% |
-| Best model test energy MAE (meV/atom) | 18.7 | 28.7 | +53% |
-| Training structures | 5.31e+03 | 5.44e+03 | +2% |
-| Test structures | 564 | 582 | +3% |
-| New structures this loop | 21 | 58 | +176% |
-| Warnings / errors logged | 71 | 17 | -76% |
+| Best model test force MAE (eV/Å) | 0.194 | 0.195 | +0% |
+| Best model test energy MAE (meV/atom) | 28.7 | 35.5 | +24% |
+| Training structures | 5.44e+03 | 5.59e+03 | +3% |
+| Test structures | 582 | 601 | +3% |
+| New structures this loop | 58 | 40 | -31% |
+| Warnings / errors logged | 17 | 12 | -29% |
 
 Best model: fit_0 of 3 (chosen on the `valid` split).
 
 ## Issues & suggestions
 
-- ✖ **remote_jobs_failed**: 14/157 remote jobs (9%) failed (12) or died (2). Check the job logs (results/alomancy.log has each failure's traceback); jobs killed by the scheduler usually need a longer max_time for that phase, or a partition with more memory.
-- ✖ **dft_partial_failure**: 14/100 structures sent to DFT (14%) came back without a result. Check the DFT output in results/<loop>/high_accuracy_evaluation; raise high_accuracy_evaluation.max_time / max_go_time if jobs timed out.
-- 💡 **overfitting**: The best model's test force MAE (0.194 eV/Å) is 2.4x its training MAE (0.0799 eV/Å). The test set covers configurations training doesn't: keep adding data, or raise general.dataset_kwargs.valid_fraction to select models on held-out data.
+- ✖ **remote_jobs_failed**: 8/156 remote jobs (5%) failed (7) or died (1). Check the job logs (results/alomancy.log has each failure's traceback); jobs killed by the scheduler usually need a longer max_time for that phase, or a partition with more memory.
+- ✖ **dft_partial_failure**: 8/100 structures sent to DFT (8%) came back without a result. Check the DFT output in results/<loop>/high_accuracy_evaluation; raise high_accuracy_evaluation.max_time / max_go_time if jobs timed out.
+- 💡 **queue_dominated**: high_accuracy_evaluation spent 51% of its time (15.3 h) queued. Raise max_num_of_concurrent_jobs in the HPC profile or use a less busy partition.
 
 ## Trends
 
@@ -36,6 +36,7 @@ Best model: fit_0 of 3 (chosen on the `valid` split).
 | 6 | 0.196 | 5263 | 75 | 92/100 | 100% | 0 | 12 |
 | 7 | 0.197 | 5308 | 21 | 32/100 | 100% | 0 | 71 |
 | 8 | 0.194 | 5440 | 58 | 86/100 | 99% | 0 | 17 |
+| 9 | 0.195 | 5592 | 40 | 92/100 | 96% | 0 | 12 |
 
 ![Best-model MAE per loop](plots/training_al_loop_mae_plot.png)
 
@@ -45,7 +46,7 @@ Best model: fit_0 of 3 (chosen on the `valid` split).
 
 ![Best model parity](plots/best_model_parity.png)
 
-Median relative error: train energy 0.1%, force 8.5%; test energy 0.1%, force 17.5%.
+Median relative error: train energy 0.1%, force 11.4%; test energy 0.2%, force 18.7%.
 Energies with |formation energy| < 0.05 eV/atom and atoms with |F| < 0.1 eV/Å are left out; force error is |ΔF|/|F| per atom.
 
 ![Best model percentage error](plots/best_model_percent_error.png)
@@ -56,7 +57,7 @@ Energies with |formation energy| < 0.05 eV/atom and atoms with |F| < 0.1 eV/Å a
 |---|---:|---:|---:|---:|
 | CNa_dataset | 3538 | 392 | 662 | 4592 |
 | IsolatedAtom | 1 | 0 | 0 | 1 |
-| high_sd | 1582 | 186 | 152 | 1920 |
+| high_sd | 1734 | 205 | 165 | 2104 |
 | init_MP | 7 | 1 | 0 | 8 |
 | init_amorphous | 26 | 3 | 0 | 29 |
 | init_dimer | 99 | 0 | 0 | 99 |
@@ -65,11 +66,11 @@ Energies with |formation energy| < 0.05 eV/atom and atoms with |F| < 0.1 eV/Å a
 | init_trimer | 50 | 0 | 0 | 50 |
 | on_hull | 1 | 0 | 0 | 1 |
 | on_hull_expansion | 11 | 0 | 9 | 20 |
-| **all** | **5440** | **582** | **1240** | **7262** |
+| **all** | **5592** | **601** | **1253** | **7446** |
 
-- Redundancy removal: 0 structure(s) flagged in total, 0 of this loop's 58 new.
-- DFT geometry-optimisation starting frames: 114 stored this loop, 92 used (the rest excluded by the train/test filters or redundancy removal).
-- Quality filters: high_force: 1231, formation_energy: 21.
+- Redundancy removal: 0 structure(s) flagged in total, 0 of this loop's 40 new.
+- DFT geometry-optimisation starting frames: 144 stored this loop, 131 used (the rest excluded by the train/test filters or redundancy removal).
+- Quality filters: high_force: 1244, formation_energy: 21.
 
 ![Training set composition](plots/training_set_composition.png)
 
@@ -77,17 +78,17 @@ Energies with |formation energy| < 0.05 eV/atom and atoms with |F| < 0.1 eV/Å a
 
 Redundancy removal flags near-duplicate training structures, so the model isn't trained on many copies of the same geometry. Each structure is described by `char_vec_128`: all of its interatomic distances, sorted and resampled to 128 values (`global_descriptor/atomic_distance_descriptor.make_char_vec`). Two structures count as duplicates when the Euclidean distance between their descriptors is below a tolerance: in database order, each structure still in the training set is kept unless it is within the tolerance of one already kept. The plot sweeps that tolerance and counts how many structures are kept at each value. **We are looking for plateaus** (shaded): ranges where the count doesn't change, so the result doesn't depend on the exact tolerance. The orange line (right axis) is the number of structures removed between consecutive tolerance steps, the gradient of the count: zero on a plateau. The start of the lowest plateau at least `general.redundancy_kwargs.min_plateau_width` of the swept range wide is used (dashed line). Nothing is flagged when no plateau qualifies, or when it would flag more than `max_flagged_fraction` of the structures; `general.redundancy_kwargs.tolerance` sets the tolerance directly.
 
-- This loop: 5,153 structures probed; the lowest plateau would flag more than 50% of them, so nothing was flagged.
+- This loop: 5,305 structures probed; the lowest plateau would flag more than 50% of them, so nothing was flagged.
 
 ![Redundancy tolerance probe](plots/redundancy_tolerance_probe.png)
 
 ## DFT
 
-- Structures: 86 returned of 100 submitted (86 relaxed, 0 single point).
-- Geometry optimisation: 85/86 reached the force ceiling (0.05 eV/Å); steps mean 28.3, median 26, max 200 of 200 allowed.
-- Average DFT time per relaxation: 167.3 min (median 126.0, max 861.7; 86 structures).
-- Largest per-atom force after DFT: median 0.04, max 0.31 eV/Å.
-- DFT phase wall-clock: 33.2 h (mean queue time 770 min).
+- Structures: 92 returned of 100 submitted (92 relaxed, 0 single point).
+- Geometry optimisation: 88/92 reached the force ceiling (0.05 eV/Å); steps mean 23.0, median 13, max 200 of 200 allowed.
+- Average DFT time per relaxation: 91.2 min (median 52.4, max 732.4; 92 structures).
+- Largest per-atom force after DFT: median 0.04, max 2.78 eV/Å.
+- DFT phase wall-clock: 30.3 h (mean queue time 918 min).
 
 **Structures evaluated with DFT this loop (final geometries)**
 
@@ -95,14 +96,14 @@ Redundancy removal flags near-duplicate training structures, so the model isn't 
 
 ## MLIP training: mace
 
-- Best fit (fit_0) trained for 299 epochs, stage two from epoch 240; weights kept from epoch 295.
+- Best fit (fit_0) trained for 299 epochs, stage two from epoch 240; weights kept from epoch 247.
 
 ![Best model training curve](plots/best_model_training_curve.png)
 
 ## Structure generation: MD
 
 - Runs: 50 (50 completed, 0 seed(s) replaced)
-- Frames: 10000 recorded, 9075 physical (no bond < 0.5 Å, volume ≤ 3 x the seed's; 875 frame(s) cut after a run expanded past it, seed frames left out), 1000 picked as candidates, spread over each run
+- Frames: 10000 recorded, 8933 physical (no bond < 0.5 Å, volume ≤ 3 x the seed's; 1017 frame(s) cut after a run expanded past it, seed frames left out), 1000 picked as candidates, spread over each run
 - Ensemble npt, T = 500 K, timestep 0.2 fs
 
 ![MD frames per run](plots/md_frames_per_run.png)
@@ -117,7 +118,7 @@ Redundancy removal flags near-duplicate training structures, so the model isn't 
 
 ## Selection: committee uncertainty
 
-- 986 candidates scored; 100 selected (10 %; max force std dev ≥ 0.35 eV/Å).
+- 985 candidates scored; 100 selected (10 %; max force std dev ≥ 0.458 eV/Å).
 
 ![Committee force std dev](plots/committee_force_std_dev.png)
 
@@ -127,9 +128,10 @@ Redundancy removal flags near-duplicate training structures, so the model isn't 
 |---|---|---:|
 | `blown_up_excluded` | blown-up cells kept from DFT (volume >> vdW volume) | 1 |
 | `dft_summary` | DFT batch summary | 1 |
-| `job_died` | remote job died (killed / lost) | 2 |
-| `job_failed` | remote job failed | 12 |
-| `jobs_started` | remote jobs started | 5 |
+| `job_died` | remote job died (killed / lost) | 1 |
+| `job_failed` | remote job failed | 7 |
+| `job_resumed` | transient remote error, polling resumed | 1 |
+| `jobs_started` | remote jobs started | 4 |
 | `md_summary` | MD summary | 1 |
 | `md_volume_expanded` | MD runs cut after expanding past max_volume_ratio | 1 |
 | `quality_filtered` | train/test quality filter passes | 2 |
