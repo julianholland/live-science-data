@@ -58,7 +58,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-14T09:58:33+01:00",
+      "updated_at": "2026-11-14T11:05:42+01:00",
       "state": "running",
       "workflow": "committee_uncertainty",
       "elements": [
@@ -98,8 +98,8 @@
         "high_accuracy_eval": {
           "status": "active",
           "total": 100,
-          "done": 98,
-          "succeeded": 91,
+          "done": 99,
+          "succeeded": 92,
           "failed": 7
         }
       },
@@ -174,7 +174,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-14T09:45:57+01:00",
+      "updated_at": "2026-11-14T11:23:48+01:00",
       "state": "running",
       "workflow": "committee_uncertainty",
       "elements": [
@@ -188,31 +188,38 @@
         "total": 5,
         "completed": 1
       },
-      "phase": "train_mlip",
+      "phase": "generate_structures",
       "phases": {
         "train_mlip": {
-          "status": "active",
+          "status": "done",
           "fits_total": 3,
-          "fits_done": 0,
+          "fits_done": 3,
           "fits_failed": 0,
-          "max_epochs": "dynamic"
+          "epochs": [
+            300,
+            300,
+            300
+          ],
+          "max_epochs": 300
         },
         "generate_structures": {
-          "status": "pending",
+          "status": "active",
           "candidates_target": 500,
-          "selected_target": 50
+          "selected_target": 50,
+          "md_runs_done": 1,
+          "md_runs_total": 1
         },
         "high_accuracy_eval": {
           "status": "pending"
         }
       },
       "best_model": {
-        "loop": 0,
+        "loop": 1,
         "trainer": "mace",
         "split": "test",
-        "mae_e_mev_per_atom": 40.42,
-        "mae_f_mev_per_a": 193.1,
-        "n_structures": 4
+        "mae_e_mev_per_atom": 18.5,
+        "mae_f_mev_per_a": 139.1,
+        "n_structures": 14
       },
       "report_loop": 0,
       "id": "viper_omat_ezga_committee",
