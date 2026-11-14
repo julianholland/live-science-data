@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "kind": "alomancy",
-  "updated_at": "2026-11-14T16:20:18+01:00",
+  "updated_at": "2026-11-14T18:03:16+01:00",
   "state": "finished",
   "workflow": "committee_uncertainty",
   "elements": [
@@ -20,9 +20,10 @@
     "train_mlip": {
       "status": "done",
       "fits_total": 3,
-      "fits_done": 2,
+      "fits_done": 3,
       "fits_failed": 0,
       "epochs": [
+        300,
         300,
         300
       ],
@@ -38,14 +39,14 @@
     }
   },
   "best_model": {
-    "loop": 9,
+    "loop": 10,
     "trainer": "mace",
     "split": "test",
-    "mae_e_mev_per_atom": 35.47,
-    "mae_f_mev_per_a": 194.7,
-    "n_structures": 582
+    "mae_e_mev_per_atom": 45.58,
+    "mae_f_mev_per_a": 187.3,
+    "n_structures": 601
   },
-  "report_loop": 9,
+  "report_loop": 10,
   "id": "good_c",
   "title": "Carbon",
   "description": "Active learning of a MACE potential for carbon, used as an example system for the ALomancy paper.",
