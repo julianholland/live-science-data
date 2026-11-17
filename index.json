@@ -173,6 +173,278 @@
     {
       "schema": 1,
       "kind": "alomancy",
+      "updated_at": "2026-11-17T13:49:27+01:00",
+      "state": "running",
+      "workflow": "random_selection",
+      "elements": [
+        "C"
+      ],
+      "trainer": "mace",
+      "generator": "md",
+      "evaluator": "qe",
+      "loop": {
+        "current": 0,
+        "total": 5,
+        "completed": 0
+      },
+      "phase": "generate_structures",
+      "phases": {
+        "train_mlip": {
+          "status": "done",
+          "fits_total": null,
+          "fits_done": null,
+          "epochs": [
+            300
+          ],
+          "max_epochs": 300
+        },
+        "generate_structures": {
+          "status": "active",
+          "candidates_target": 500,
+          "selected_target": 50,
+          "md_runs_done": 0,
+          "md_runs_total": 50
+        },
+        "high_accuracy_eval": {
+          "status": "pending"
+        }
+      },
+      "best_model": {
+        "loop": 0,
+        "trainer": "mace",
+        "split": "test",
+        "mae_e_mev_per_atom": 33.59,
+        "mae_f_mev_per_a": 72.4,
+        "n_structures": 18
+      },
+      "report_loop": null,
+      "id": "viper_omat_md_random",
+      "title": "Carbon: Random × NPT MD",
+      "description": "Carbon MACE potential fine-tuned from the MACE-OMAT foundation model, using random selection (baseline) with NPT molecular dynamics exploration and Quantum ESPRESSO labelling. One of six runs comparing selection strategies and structure generators for the ALomancy paper.",
+      "gif": "structures.gif",
+      "report": null
+    },
+    {
+      "schema": 1,
+      "kind": "alomancy",
+      "updated_at": "2026-11-17T13:47:28+01:00",
+      "state": "running",
+      "workflow": "novelty_selection",
+      "elements": [
+        "C"
+      ],
+      "trainer": "mace",
+      "generator": "md",
+      "evaluator": "qe",
+      "loop": {
+        "current": 0,
+        "total": 5,
+        "completed": 0
+      },
+      "phase": "generate_structures",
+      "phases": {
+        "train_mlip": {
+          "status": "done",
+          "fits_total": null,
+          "fits_done": null,
+          "epochs": [
+            300
+          ],
+          "max_epochs": 300
+        },
+        "generate_structures": {
+          "status": "active",
+          "candidates_target": 500,
+          "selected_target": 50,
+          "md_runs_done": 0,
+          "md_runs_total": 50
+        },
+        "high_accuracy_eval": {
+          "status": "pending"
+        }
+      },
+      "best_model": {
+        "loop": 0,
+        "trainer": "mace",
+        "split": "test",
+        "mae_e_mev_per_atom": 33.59,
+        "mae_f_mev_per_a": 72.4,
+        "n_structures": 18
+      },
+      "report_loop": null,
+      "id": "viper_omat_md_novelty",
+      "title": "Carbon: Novelty × NPT MD",
+      "description": "Carbon MACE potential fine-tuned from the MACE-OMAT foundation model, using novelty selection with NPT molecular dynamics exploration and Quantum ESPRESSO labelling. One of six runs comparing selection strategies and structure generators for the ALomancy paper.",
+      "gif": "structures.gif",
+      "report": null
+    },
+    {
+      "schema": 1,
+      "kind": "alomancy",
+      "updated_at": "2026-11-17T13:46:43+01:00",
+      "state": "running",
+      "workflow": "committee_uncertainty",
+      "elements": [
+        "C"
+      ],
+      "trainer": "mace",
+      "generator": "md",
+      "evaluator": "qe",
+      "loop": {
+        "current": 0,
+        "total": 5,
+        "completed": 0
+      },
+      "phase": "generate_structures",
+      "phases": {
+        "train_mlip": {
+          "status": "done",
+          "fits_total": 3,
+          "fits_done": 3,
+          "epochs": [
+            300,
+            300,
+            300
+          ],
+          "max_epochs": 300
+        },
+        "generate_structures": {
+          "status": "active",
+          "candidates_target": 500,
+          "selected_target": 50,
+          "md_runs_done": 0,
+          "md_runs_total": 50
+        },
+        "high_accuracy_eval": {
+          "status": "pending"
+        }
+      },
+      "best_model": {
+        "loop": 0,
+        "trainer": "mace",
+        "split": "test",
+        "mae_e_mev_per_atom": 32.0,
+        "mae_f_mev_per_a": 68.3,
+        "n_structures": 18
+      },
+      "report_loop": null,
+      "id": "viper_omat_md_committee",
+      "title": "Carbon: Committee × NPT MD",
+      "description": "Carbon MACE potential fine-tuned from the MACE-OMAT foundation model, using committee-uncertainty selection with NPT molecular dynamics exploration and Quantum ESPRESSO labelling. One of six runs comparing selection strategies and structure generators for the ALomancy paper.",
+      "gif": "structures.gif",
+      "report": null
+    },
+    {
+      "schema": 1,
+      "kind": "alomancy",
+      "updated_at": "2026-11-17T13:43:24+01:00",
+      "state": "running",
+      "workflow": "random_selection",
+      "elements": [
+        "C"
+      ],
+      "trainer": "mace",
+      "generator": "ezga",
+      "evaluator": "qe",
+      "loop": {
+        "current": 0,
+        "total": 5,
+        "completed": 0
+      },
+      "phase": "generate_structures",
+      "phases": {
+        "train_mlip": {
+          "status": "done",
+          "fits_total": null,
+          "fits_done": null,
+          "epochs": [
+            300
+          ],
+          "max_epochs": 300
+        },
+        "generate_structures": {
+          "status": "active",
+          "candidates_target": 500,
+          "selected_target": 50,
+          "md_runs_done": 0,
+          "md_runs_total": 1
+        },
+        "high_accuracy_eval": {
+          "status": "pending"
+        }
+      },
+      "best_model": {
+        "loop": 0,
+        "trainer": "mace",
+        "split": "test",
+        "mae_e_mev_per_atom": 33.59,
+        "mae_f_mev_per_a": 72.4,
+        "n_structures": 18
+      },
+      "report_loop": null,
+      "id": "viper_omat_ezga_random",
+      "title": "Carbon: Random × EZGA",
+      "description": "Carbon MACE potential fine-tuned from the MACE-OMAT foundation model, using random selection (baseline) with EZGA genetic-algorithm search exploration and Quantum ESPRESSO labelling. One of six runs comparing selection strategies and structure generators for the ALomancy paper.",
+      "gif": "structures.gif",
+      "report": null
+    },
+    {
+      "schema": 1,
+      "kind": "alomancy",
+      "updated_at": "2026-11-17T13:47:14+01:00",
+      "state": "running",
+      "workflow": "novelty_selection",
+      "elements": [
+        "C"
+      ],
+      "trainer": "mace",
+      "generator": "ezga",
+      "evaluator": "qe",
+      "loop": {
+        "current": 0,
+        "total": 5,
+        "completed": 0
+      },
+      "phase": "generate_structures",
+      "phases": {
+        "train_mlip": {
+          "status": "done",
+          "fits_total": null,
+          "fits_done": null,
+          "epochs": [
+            300
+          ],
+          "max_epochs": 300
+        },
+        "generate_structures": {
+          "status": "active",
+          "candidates_target": 500,
+          "selected_target": 50,
+          "md_runs_done": 0,
+          "md_runs_total": 1
+        },
+        "high_accuracy_eval": {
+          "status": "pending"
+        }
+      },
+      "best_model": {
+        "loop": 0,
+        "trainer": "mace",
+        "split": "test",
+        "mae_e_mev_per_atom": 33.59,
+        "mae_f_mev_per_a": 72.4,
+        "n_structures": 18
+      },
+      "report_loop": null,
+      "id": "viper_omat_ezga_novelty",
+      "title": "Carbon: Novelty × EZGA",
+      "description": "Carbon MACE potential fine-tuned from the MACE-OMAT foundation model, using novelty selection with EZGA genetic-algorithm search exploration and Quantum ESPRESSO labelling. One of six runs comparing selection strategies and structure generators for the ALomancy paper.",
+      "gif": "structures.gif",
+      "report": null
+    },
+    {
+      "schema": 1,
+      "kind": "alomancy",
       "updated_at": "2026-11-17T09:01:28+01:00",
       "state": "running",
       "workflow": "committee_uncertainty",
