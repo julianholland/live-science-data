@@ -174,7 +174,7 @@
       "schema": 1,
       "kind": "alomancy",
       "updated_at": "2026-11-17T13:49:27+01:00",
-      "state": "running",
+      "state": "stalled",
       "workflow": "random_selection",
       "elements": [
         "C"
@@ -228,7 +228,7 @@
       "schema": 1,
       "kind": "alomancy",
       "updated_at": "2026-11-17T13:47:28+01:00",
-      "state": "running",
+      "state": "stalled",
       "workflow": "novelty_selection",
       "elements": [
         "C"
