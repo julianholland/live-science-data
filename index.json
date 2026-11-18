@@ -227,7 +227,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-18T23:59:57+01:00",
+      "updated_at": "2026-11-19T00:27:49+01:00",
       "state": "running",
       "workflow": "novelty_selection",
       "elements": [
@@ -256,7 +256,7 @@
           "status": "active",
           "candidates_target": 500,
           "selected_target": 50,
-          "md_runs_done": 32,
+          "md_runs_done": 37,
           "md_runs_total": 50
         },
         "high_accuracy_eval": {
@@ -281,7 +281,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-18T23:58:29+01:00",
+      "updated_at": "2026-11-19T00:26:17+01:00",
       "state": "running",
       "workflow": "committee_uncertainty",
       "elements": [
@@ -312,7 +312,7 @@
           "status": "active",
           "candidates_target": 500,
           "selected_target": 50,
-          "md_runs_done": 41,
+          "md_runs_done": 43,
           "md_runs_total": 50
         },
         "high_accuracy_eval": {
