@@ -173,8 +173,8 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-17T13:49:27+01:00",
-      "state": "stalled",
+      "updated_at": "2026-11-18T19:53:28+01:00",
+      "state": "running",
       "workflow": "random_selection",
       "elements": [
         "C"
@@ -227,8 +227,8 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-17T13:47:28+01:00",
-      "state": "stalled",
+      "updated_at": "2026-11-18T19:50:50+01:00",
+      "state": "running",
       "workflow": "novelty_selection",
       "elements": [
         "C"
@@ -281,7 +281,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-18T08:07:53+01:00",
+      "updated_at": "2026-11-18T19:50:50+01:00",
       "state": "running",
       "workflow": "committee_uncertainty",
       "elements": [
