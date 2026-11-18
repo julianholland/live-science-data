@@ -281,7 +281,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-17T13:46:43+01:00",
+      "updated_at": "2026-11-18T05:59:25+01:00",
       "state": "running",
       "workflow": "committee_uncertainty",
       "elements": [
@@ -312,7 +312,7 @@
           "status": "active",
           "candidates_target": 500,
           "selected_target": 50,
-          "md_runs_done": 0,
+          "md_runs_done": 4,
           "md_runs_total": 50
         },
         "high_accuracy_eval": {
@@ -337,7 +337,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-17T13:43:24+01:00",
+      "updated_at": "2026-11-18T05:39:21+01:00",
       "state": "running",
       "workflow": "random_selection",
       "elements": [
@@ -351,7 +351,7 @@
         "total": 5,
         "completed": 0
       },
-      "phase": "generate_structures",
+      "phase": "high_accuracy_eval",
       "phases": {
         "train_mlip": {
           "status": "done",
@@ -363,14 +363,16 @@
           "max_epochs": 300
         },
         "generate_structures": {
-          "status": "active",
+          "status": "done",
           "candidates_target": 500,
-          "selected_target": 50,
-          "md_runs_done": 0,
-          "md_runs_total": 1
+          "selected_target": 50
         },
         "high_accuracy_eval": {
-          "status": "pending"
+          "status": "active",
+          "total": 50,
+          "done": 0,
+          "succeeded": 0,
+          "failed": 0
         }
       },
       "best_model": {
@@ -391,7 +393,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-17T13:47:14+01:00",
+      "updated_at": "2026-11-18T05:41:23+01:00",
       "state": "running",
       "workflow": "novelty_selection",
       "elements": [
@@ -405,7 +407,7 @@
         "total": 5,
         "completed": 0
       },
-      "phase": "generate_structures",
+      "phase": "high_accuracy_eval",
       "phases": {
         "train_mlip": {
           "status": "done",
@@ -417,14 +419,16 @@
           "max_epochs": 300
         },
         "generate_structures": {
-          "status": "active",
+          "status": "done",
           "candidates_target": 500,
-          "selected_target": 50,
-          "md_runs_done": 0,
-          "md_runs_total": 1
+          "selected_target": 50
         },
         "high_accuracy_eval": {
-          "status": "pending"
+          "status": "active",
+          "total": 50,
+          "done": 0,
+          "succeeded": 0,
+          "failed": 0
         }
       },
       "best_model": {
