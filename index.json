@@ -173,7 +173,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-19T03:22:47+01:00",
+      "updated_at": "2026-11-19T03:40:26+01:00",
       "state": "running",
       "workflow": "random_selection",
       "elements": [
@@ -187,7 +187,7 @@
         "total": 5,
         "completed": 0
       },
-      "phase": "generate_structures",
+      "phase": "high_accuracy_eval",
       "phases": {
         "train_mlip": {
           "status": "done",
@@ -199,14 +199,19 @@
           "max_epochs": 300
         },
         "generate_structures": {
-          "status": "active",
+          "status": "done",
           "candidates_target": 500,
           "selected_target": 50,
-          "md_runs_done": 47,
+          "candidates": 500,
+          "md_runs_done": 50,
           "md_runs_total": 50
         },
         "high_accuracy_eval": {
-          "status": "pending"
+          "status": "active",
+          "total": 50,
+          "done": 0,
+          "succeeded": 0,
+          "failed": 0
         }
       },
       "best_model": {
@@ -286,7 +291,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-19T03:27:24+01:00",
+      "updated_at": "2026-11-19T03:35:16+01:00",
       "state": "running",
       "workflow": "committee_uncertainty",
       "elements": [
@@ -300,7 +305,7 @@
         "total": 5,
         "completed": 0
       },
-      "phase": "generate_structures",
+      "phase": "high_accuracy_eval",
       "phases": {
         "train_mlip": {
           "status": "done",
@@ -314,15 +319,20 @@
           "max_epochs": 300
         },
         "generate_structures": {
-          "status": "active",
+          "status": "done",
           "candidates_target": 500,
           "selected_target": 50,
           "candidates": 500,
           "md_runs_done": 50,
-          "md_runs_total": 50
+          "md_runs_total": 50,
+          "selected": 50
         },
         "high_accuracy_eval": {
-          "status": "pending"
+          "status": "active",
+          "total": 50,
+          "done": 0,
+          "succeeded": 0,
+          "failed": 0
         }
       },
       "best_model": {
@@ -343,7 +353,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-19T03:28:02+01:00",
+      "updated_at": "2026-11-19T03:55:10+01:00",
       "state": "running",
       "workflow": "random_selection",
       "elements": [
@@ -376,8 +386,8 @@
         "high_accuracy_eval": {
           "status": "active",
           "total": 50,
-          "done": 17,
-          "succeeded": 17,
+          "done": 23,
+          "succeeded": 23,
           "failed": 0
         }
       },
@@ -455,7 +465,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-18T04:43:02+01:00",
+      "updated_at": "2026-11-19T03:37:14+01:00",
       "state": "running",
       "workflow": "committee_uncertainty",
       "elements": [
@@ -469,7 +479,7 @@
         "total": 5,
         "completed": 1
       },
-      "phase": "generate_structures",
+      "phase": "high_accuracy_eval",
       "phases": {
         "train_mlip": {
           "status": "done",
@@ -484,14 +494,17 @@
           "max_epochs": 300
         },
         "generate_structures": {
-          "status": "active",
+          "status": "done",
           "candidates_target": 500,
           "selected_target": 50,
-          "md_runs_done": 0,
-          "md_runs_total": 1
+          "selected": 50
         },
         "high_accuracy_eval": {
-          "status": "pending"
+          "status": "active",
+          "total": 50,
+          "done": 0,
+          "succeeded": 0,
+          "failed": 0
         }
       },
       "best_model": {
