@@ -353,7 +353,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-20T02:21:35+01:00",
+      "updated_at": "2026-11-20T02:38:50+01:00",
       "state": "running",
       "workflow": "random_selection",
       "elements": [
@@ -363,32 +363,26 @@
       "generator": "ezga",
       "evaluator": "qe",
       "loop": {
-        "current": 0,
+        "current": 1,
         "total": 5,
-        "completed": 0
+        "completed": 1
       },
-      "phase": "high_accuracy_eval",
+      "phase": "train_mlip",
       "phases": {
         "train_mlip": {
-          "status": "done",
-          "fits_total": null,
-          "fits_done": null,
-          "epochs": [
-            300
-          ],
-          "max_epochs": 300
+          "status": "active",
+          "fits_total": 1,
+          "fits_done": 0,
+          "fits_failed": 0,
+          "max_epochs": "dynamic"
         },
         "generate_structures": {
-          "status": "done",
+          "status": "pending",
           "candidates_target": 500,
           "selected_target": 50
         },
         "high_accuracy_eval": {
-          "status": "active",
-          "total": 50,
-          "done": 49,
-          "succeeded": 49,
-          "failed": 0
+          "status": "pending"
         }
       },
       "best_model": {
@@ -399,17 +393,17 @@
         "mae_f_mev_per_a": 72.4,
         "n_structures": 18
       },
-      "report_loop": null,
+      "report_loop": 0,
       "id": "viper_omat_ezga_random",
       "title": "Carbon: Random × EZGA",
       "description": "Carbon MACE potential fine-tuned from the MACE-OMAT foundation model, using random selection (baseline) with EZGA genetic-algorithm search exploration and Quantum ESPRESSO labelling. One of six runs comparing selection strategies and structure generators for the ALomancy paper.",
       "gif": "structures.gif",
-      "report": null
+      "report": "report/report.md"
     },
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-20T02:27:38+01:00",
+      "updated_at": "2026-11-20T02:59:28+01:00",
       "state": "running",
       "workflow": "novelty_selection",
       "elements": [
@@ -442,8 +436,8 @@
         "high_accuracy_eval": {
           "status": "active",
           "total": 50,
-          "done": 11,
-          "succeeded": 11,
+          "done": 22,
+          "succeeded": 22,
           "failed": 0
         }
       },
