@@ -353,7 +353,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-20T00:52:22+01:00",
+      "updated_at": "2026-11-20T01:50:07+01:00",
       "state": "running",
       "workflow": "random_selection",
       "elements": [
@@ -386,8 +386,8 @@
         "high_accuracy_eval": {
           "status": "active",
           "total": 50,
-          "done": 45,
-          "succeeded": 45,
+          "done": 47,
+          "succeeded": 47,
           "failed": 0
         }
       },
@@ -409,7 +409,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-20T01:16:08+01:00",
+      "updated_at": "2026-11-20T01:54:02+01:00",
       "state": "running",
       "workflow": "novelty_selection",
       "elements": [
@@ -442,8 +442,8 @@
         "high_accuracy_eval": {
           "status": "active",
           "total": 50,
-          "done": 1,
-          "succeeded": 1,
+          "done": 3,
+          "succeeded": 3,
           "failed": 0
         }
       },
