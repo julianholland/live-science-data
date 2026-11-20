@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "kind": "alomancy",
-  "updated_at": "2026-11-20T07:20:08+01:00",
+  "updated_at": "2026-11-20T08:24:01+01:00",
   "state": "running",
   "workflow": "novelty_selection",
   "elements": [
@@ -37,8 +37,8 @@
     "high_accuracy_eval": {
       "status": "active",
       "total": 50,
-      "done": 4,
-      "succeeded": 4,
+      "done": 5,
+      "succeeded": 5,
       "failed": 0
     }
   },
