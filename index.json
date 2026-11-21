@@ -173,7 +173,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-21T07:42:00+01:00",
+      "updated_at": "2026-11-21T08:04:12+01:00",
       "state": "running",
       "workflow": "random_selection",
       "elements": [
@@ -232,7 +232,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-21T07:57:39+01:00",
+      "updated_at": "2026-11-21T08:20:40+01:00",
       "state": "running",
       "workflow": "novelty_selection",
       "elements": [
@@ -268,8 +268,8 @@
         "high_accuracy_eval": {
           "status": "active",
           "total": 50,
-          "done": 12,
-          "succeeded": 12,
+          "done": 14,
+          "succeeded": 14,
           "failed": 0
         }
       },
@@ -291,7 +291,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-21T07:48:02+01:00",
+      "updated_at": "2026-11-21T08:20:30+01:00",
       "state": "running",
       "workflow": "committee_uncertainty",
       "elements": [
@@ -353,7 +353,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-21T07:49:45+01:00",
+      "updated_at": "2026-11-21T08:20:10+01:00",
       "state": "running",
       "workflow": "random_selection",
       "elements": [
@@ -410,7 +410,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-21T04:23:00+01:00",
+      "updated_at": "2026-11-21T08:04:18+01:00",
       "state": "running",
       "workflow": "novelty_selection",
       "elements": [
