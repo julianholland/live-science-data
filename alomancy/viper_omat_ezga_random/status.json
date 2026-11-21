@@ -1,8 +1,8 @@
 {
   "schema": 1,
   "kind": "alomancy",
-  "updated_at": "2026-11-20T02:38:50+01:00",
-  "state": "stalled",
+  "updated_at": "2026-11-21T04:27:58+01:00",
+  "state": "running",
   "workflow": "random_selection",
   "elements": [
     "C"
@@ -15,31 +15,38 @@
     "total": 5,
     "completed": 1
   },
-  "phase": "train_mlip",
+  "phase": "high_accuracy_eval",
   "phases": {
     "train_mlip": {
-      "status": "active",
+      "status": "done",
       "fits_total": 1,
-      "fits_done": 0,
+      "fits_done": 1,
       "fits_failed": 0,
-      "max_epochs": "dynamic"
+      "epochs": [
+        300
+      ],
+      "max_epochs": 300
     },
     "generate_structures": {
-      "status": "pending",
+      "status": "done",
       "candidates_target": 500,
       "selected_target": 50
     },
     "high_accuracy_eval": {
-      "status": "pending"
+      "status": "active",
+      "total": 50,
+      "done": 0,
+      "succeeded": 0,
+      "failed": 0
     }
   },
   "best_model": {
-    "loop": 0,
+    "loop": 1,
     "trainer": "mace",
     "split": "test",
-    "mae_e_mev_per_atom": 33.59,
-    "mae_f_mev_per_a": 72.4,
-    "n_structures": 18
+    "mae_e_mev_per_atom": 39.77,
+    "mae_f_mev_per_a": 136.2,
+    "n_structures": 28
   },
   "report_loop": 0,
   "id": "viper_omat_ezga_random",
