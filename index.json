@@ -173,7 +173,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-22T08:20:10+01:00",
+      "updated_at": "2026-11-22T08:57:46+01:00",
       "state": "running",
       "workflow": "random_selection",
       "elements": [
@@ -232,7 +232,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-22T08:21:17+01:00",
+      "updated_at": "2026-11-22T08:39:34+01:00",
       "state": "running",
       "workflow": "novelty_selection",
       "elements": [
@@ -291,7 +291,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-22T08:25:55+01:00",
+      "updated_at": "2026-11-22T08:43:46+01:00",
       "state": "running",
       "workflow": "committee_uncertainty",
       "elements": [
@@ -467,7 +467,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-22T08:20:10+01:00",
+      "updated_at": "2026-11-22T08:41:59+01:00",
       "state": "running",
       "workflow": "committee_uncertainty",
       "elements": [
