@@ -353,8 +353,8 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-21T08:20:10+01:00",
-      "state": "stalled",
+      "updated_at": "2026-11-22T10:29:43+01:00",
+      "state": "running",
       "workflow": "random_selection",
       "elements": [
         "C"
@@ -410,8 +410,8 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-21T08:04:18+01:00",
-      "state": "stalled",
+      "updated_at": "2026-11-22T10:28:47+01:00",
+      "state": "running",
       "workflow": "novelty_selection",
       "elements": [
         "C"
