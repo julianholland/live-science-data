@@ -232,7 +232,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-22T19:22:12+01:00",
+      "updated_at": "2026-11-22T23:29:15+01:00",
       "state": "running",
       "workflow": "novelty_selection",
       "elements": [
@@ -268,8 +268,8 @@
         "high_accuracy_eval": {
           "status": "active",
           "total": 50,
-          "done": 14,
-          "succeeded": 14,
+          "done": 19,
+          "succeeded": 19,
           "failed": 0
         }
       },
