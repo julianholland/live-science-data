@@ -173,7 +173,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-22T07:53:33+01:00",
+      "updated_at": "2026-11-22T08:20:10+01:00",
       "state": "running",
       "workflow": "random_selection",
       "elements": [
@@ -232,7 +232,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-21T13:21:16+01:00",
+      "updated_at": "2026-11-22T08:21:17+01:00",
       "state": "running",
       "workflow": "novelty_selection",
       "elements": [
@@ -291,7 +291,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-22T07:52:51+01:00",
+      "updated_at": "2026-11-22T08:25:55+01:00",
       "state": "running",
       "workflow": "committee_uncertainty",
       "elements": [
@@ -354,7 +354,7 @@
       "schema": 1,
       "kind": "alomancy",
       "updated_at": "2026-11-21T08:20:10+01:00",
-      "state": "running",
+      "state": "stalled",
       "workflow": "random_selection",
       "elements": [
         "C"
@@ -411,7 +411,7 @@
       "schema": 1,
       "kind": "alomancy",
       "updated_at": "2026-11-21T08:04:18+01:00",
-      "state": "running",
+      "state": "stalled",
       "workflow": "novelty_selection",
       "elements": [
         "C"
@@ -467,7 +467,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-22T07:52:29+01:00",
+      "updated_at": "2026-11-22T08:20:10+01:00",
       "state": "running",
       "workflow": "committee_uncertainty",
       "elements": [
