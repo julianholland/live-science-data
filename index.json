@@ -232,7 +232,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-23T03:59:00+01:00",
+      "updated_at": "2026-11-23T04:10:55+01:00",
       "state": "running",
       "workflow": "novelty_selection",
       "elements": [
@@ -268,8 +268,8 @@
         "high_accuracy_eval": {
           "status": "active",
           "total": 50,
-          "done": 48,
-          "succeeded": 46,
+          "done": 49,
+          "succeeded": 47,
           "failed": 2
         }
       },
@@ -291,7 +291,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-22T21:42:08+01:00",
+      "updated_at": "2026-11-23T04:27:31+01:00",
       "state": "running",
       "workflow": "committee_uncertainty",
       "elements": [
@@ -330,8 +330,8 @@
         "high_accuracy_eval": {
           "status": "active",
           "total": 50,
-          "done": 0,
-          "succeeded": 0,
+          "done": 14,
+          "succeeded": 14,
           "failed": 0
         }
       },
