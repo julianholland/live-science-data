@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "kind": "alomancy",
-  "updated_at": "2026-11-23T05:29:42+01:00",
+  "updated_at": "2026-11-23T05:58:26+01:00",
   "state": "running",
   "workflow": "novelty_selection",
   "elements": [
@@ -30,7 +30,9 @@
     "generate_structures": {
       "status": "active",
       "candidates_target": 500,
-      "selected_target": 50
+      "selected_target": 50,
+      "md_runs_done": 14,
+      "md_runs_total": 50
     },
     "high_accuracy_eval": {
       "status": "pending"
