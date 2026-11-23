@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "kind": "alomancy",
-  "updated_at": "2026-11-23T07:03:17+01:00",
+  "updated_at": "2026-11-23T08:06:03+01:00",
   "state": "running",
   "workflow": "novelty_selection",
   "elements": [
@@ -11,33 +11,26 @@
   "generator": "ezga",
   "evaluator": "qe",
   "loop": {
-    "current": 1,
+    "current": 2,
     "total": 5,
-    "completed": 1
+    "completed": 2
   },
-  "phase": "high_accuracy_eval",
+  "phase": "train_mlip",
   "phases": {
     "train_mlip": {
-      "status": "done",
+      "status": "active",
       "fits_total": 1,
-      "fits_done": 1,
+      "fits_done": 0,
       "fits_failed": 0,
-      "epochs": [
-        300
-      ],
-      "max_epochs": 300
+      "max_epochs": "dynamic"
     },
     "generate_structures": {
-      "status": "done",
+      "status": "pending",
       "candidates_target": 500,
       "selected_target": 50
     },
     "high_accuracy_eval": {
-      "status": "active",
-      "total": 50,
-      "done": 48,
-      "succeeded": 46,
-      "failed": 2
+      "status": "pending"
     }
   },
   "best_model": {
@@ -48,7 +41,7 @@
     "mae_f_mev_per_a": 124.9,
     "n_structures": 28
   },
-  "report_loop": 0,
+  "report_loop": 1,
   "id": "viper_omat_ezga_novelty",
   "title": "Carbon: Novelty × EZGA",
   "description": "Carbon MACE potential fine-tuned from the MACE-OMAT foundation model, using novelty selection with EZGA genetic-algorithm search exploration and Quantum ESPRESSO labelling. One of six runs comparing selection strategies and structure generators for the ALomancy paper.",

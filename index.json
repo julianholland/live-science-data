@@ -173,7 +173,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-23T07:59:40+01:00",
+      "updated_at": "2026-11-23T08:06:40+01:00",
       "state": "running",
       "workflow": "random_selection",
       "elements": [
@@ -187,7 +187,7 @@
         "total": 5,
         "completed": 1
       },
-      "phase": "generate_structures",
+      "phase": "high_accuracy_eval",
       "phases": {
         "train_mlip": {
           "status": "done",
@@ -200,14 +200,19 @@
           "max_epochs": 300
         },
         "generate_structures": {
-          "status": "active",
+          "status": "done",
           "candidates_target": 500,
           "selected_target": 50,
-          "md_runs_done": 47,
+          "candidates": 500,
+          "md_runs_done": 50,
           "md_runs_total": 50
         },
         "high_accuracy_eval": {
-          "status": "pending"
+          "status": "active",
+          "total": 50,
+          "done": 0,
+          "succeeded": 0,
+          "failed": 0
         }
       },
       "best_model": {
@@ -228,7 +233,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-23T07:58:38+01:00",
+      "updated_at": "2026-11-23T08:25:59+01:00",
       "state": "running",
       "workflow": "novelty_selection",
       "elements": [
@@ -265,8 +270,8 @@
         "high_accuracy_eval": {
           "status": "active",
           "total": 50,
-          "done": 2,
-          "succeeded": 2,
+          "done": 27,
+          "succeeded": 27,
           "failed": 0
         }
       },
@@ -288,7 +293,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-23T06:50:54+01:00",
+      "updated_at": "2026-11-23T08:29:06+01:00",
       "state": "running",
       "workflow": "committee_uncertainty",
       "elements": [
@@ -320,7 +325,7 @@
           "status": "active",
           "candidates_target": 500,
           "selected_target": 50,
-          "md_runs_done": 0,
+          "md_runs_done": 30,
           "md_runs_total": 50
         },
         "high_accuracy_eval": {
@@ -345,66 +350,9 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-23T07:55:16+01:00",
+      "updated_at": "2026-11-23T08:27:57+01:00",
       "state": "running",
       "workflow": "random_selection",
-      "elements": [
-        "C"
-      ],
-      "trainer": "mace",
-      "generator": "ezga",
-      "evaluator": "qe",
-      "loop": {
-        "current": 1,
-        "total": 5,
-        "completed": 1
-      },
-      "phase": "high_accuracy_eval",
-      "phases": {
-        "train_mlip": {
-          "status": "done",
-          "fits_total": 1,
-          "fits_done": 1,
-          "fits_failed": 0,
-          "epochs": [
-            300
-          ],
-          "max_epochs": 300
-        },
-        "generate_structures": {
-          "status": "done",
-          "candidates_target": 500,
-          "selected_target": 50
-        },
-        "high_accuracy_eval": {
-          "status": "active",
-          "total": 50,
-          "done": 43,
-          "succeeded": 42,
-          "failed": 1
-        }
-      },
-      "best_model": {
-        "loop": 1,
-        "trainer": "mace",
-        "split": "test",
-        "mae_e_mev_per_atom": 39.77,
-        "mae_f_mev_per_a": 136.2,
-        "n_structures": 28
-      },
-      "report_loop": 0,
-      "id": "viper_omat_ezga_random",
-      "title": "Carbon: Random × EZGA",
-      "description": "Carbon MACE potential fine-tuned from the MACE-OMAT foundation model, using random selection (baseline) with EZGA genetic-algorithm search exploration and Quantum ESPRESSO labelling. One of six runs comparing selection strategies and structure generators for the ALomancy paper.",
-      "gif": "structures.gif",
-      "report": "report/report.md"
-    },
-    {
-      "schema": 1,
-      "kind": "alomancy",
-      "updated_at": "2026-11-23T07:03:17+01:00",
-      "state": "running",
-      "workflow": "novelty_selection",
       "elements": [
         "C"
       ],
@@ -445,11 +393,61 @@
         "loop": 1,
         "trainer": "mace",
         "split": "test",
+        "mae_e_mev_per_atom": 39.77,
+        "mae_f_mev_per_a": 136.2,
+        "n_structures": 28
+      },
+      "report_loop": 0,
+      "id": "viper_omat_ezga_random",
+      "title": "Carbon: Random × EZGA",
+      "description": "Carbon MACE potential fine-tuned from the MACE-OMAT foundation model, using random selection (baseline) with EZGA genetic-algorithm search exploration and Quantum ESPRESSO labelling. One of six runs comparing selection strategies and structure generators for the ALomancy paper.",
+      "gif": "structures.gif",
+      "report": "report/report.md"
+    },
+    {
+      "schema": 1,
+      "kind": "alomancy",
+      "updated_at": "2026-11-23T08:06:03+01:00",
+      "state": "running",
+      "workflow": "novelty_selection",
+      "elements": [
+        "C"
+      ],
+      "trainer": "mace",
+      "generator": "ezga",
+      "evaluator": "qe",
+      "loop": {
+        "current": 2,
+        "total": 5,
+        "completed": 2
+      },
+      "phase": "train_mlip",
+      "phases": {
+        "train_mlip": {
+          "status": "active",
+          "fits_total": 1,
+          "fits_done": 0,
+          "fits_failed": 0,
+          "max_epochs": "dynamic"
+        },
+        "generate_structures": {
+          "status": "pending",
+          "candidates_target": 500,
+          "selected_target": 50
+        },
+        "high_accuracy_eval": {
+          "status": "pending"
+        }
+      },
+      "best_model": {
+        "loop": 1,
+        "trainer": "mace",
+        "split": "test",
         "mae_e_mev_per_atom": 55.41,
         "mae_f_mev_per_a": 124.9,
         "n_structures": 28
       },
-      "report_loop": 0,
+      "report_loop": 1,
       "id": "viper_omat_ezga_novelty",
       "title": "Carbon: Novelty × EZGA",
       "description": "Carbon MACE potential fine-tuned from the MACE-OMAT foundation model, using novelty selection with EZGA genetic-algorithm search exploration and Quantum ESPRESSO labelling. One of six runs comparing selection strategies and structure generators for the ALomancy paper.",
@@ -459,7 +457,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-23T07:44:16+01:00",
+      "updated_at": "2026-11-23T08:29:20+01:00",
       "state": "running",
       "workflow": "committee_uncertainty",
       "elements": [
@@ -491,7 +489,7 @@
           "status": "active",
           "candidates_target": 500,
           "selected_target": 50,
-          "md_runs_done": 0,
+          "md_runs_done": 1,
           "md_runs_total": 3
         },
         "high_accuracy_eval": {
