@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "kind": "alomancy",
-  "updated_at": "2026-11-23T04:10:55+01:00",
+  "updated_at": "2026-11-23T05:29:42+01:00",
   "state": "running",
   "workflow": "novelty_selection",
   "elements": [
@@ -11,49 +11,43 @@
   "generator": "md",
   "evaluator": "qe",
   "loop": {
-    "current": 0,
+    "current": 1,
     "total": 5,
-    "completed": 0
+    "completed": 1
   },
-  "phase": "high_accuracy_eval",
+  "phase": "generate_structures",
   "phases": {
     "train_mlip": {
       "status": "done",
-      "fits_total": null,
-      "fits_done": null,
+      "fits_total": 1,
+      "fits_done": 1,
+      "fits_failed": 0,
       "epochs": [
         300
       ],
       "max_epochs": 300
     },
     "generate_structures": {
-      "status": "done",
+      "status": "active",
       "candidates_target": 500,
-      "selected_target": 50,
-      "candidates": 500,
-      "md_runs_done": 50,
-      "md_runs_total": 50
+      "selected_target": 50
     },
     "high_accuracy_eval": {
-      "status": "active",
-      "total": 50,
-      "done": 49,
-      "succeeded": 47,
-      "failed": 2
+      "status": "pending"
     }
   },
   "best_model": {
-    "loop": 0,
+    "loop": 1,
     "trainer": "mace",
     "split": "test",
-    "mae_e_mev_per_atom": 33.59,
-    "mae_f_mev_per_a": 72.4,
-    "n_structures": 18
+    "mae_e_mev_per_atom": 31.7,
+    "mae_f_mev_per_a": 110.8,
+    "n_structures": 28
   },
-  "report_loop": null,
+  "report_loop": 0,
   "id": "viper_omat_md_novelty",
   "title": "Carbon: Novelty × NPT MD",
   "description": "Carbon MACE potential fine-tuned from the MACE-OMAT foundation model, using novelty selection with NPT molecular dynamics exploration and Quantum ESPRESSO labelling. One of six runs comparing selection strategies and structure generators for the ALomancy paper.",
   "gif": "structures.gif",
-  "report": null
+  "report": "report/report.md"
 }
