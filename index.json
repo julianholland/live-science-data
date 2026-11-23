@@ -173,7 +173,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-23T06:59:56+01:00",
+      "updated_at": "2026-11-23T07:29:41+01:00",
       "state": "running",
       "workflow": "random_selection",
       "elements": [
@@ -203,7 +203,7 @@
           "status": "active",
           "candidates_target": 500,
           "selected_target": 50,
-          "md_runs_done": 2,
+          "md_runs_done": 22,
           "md_runs_total": 50
         },
         "high_accuracy_eval": {
@@ -345,7 +345,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-23T07:00:00+01:00",
+      "updated_at": "2026-11-23T07:28:53+01:00",
       "state": "running",
       "workflow": "random_selection",
       "elements": [
@@ -379,9 +379,9 @@
         "high_accuracy_eval": {
           "status": "active",
           "total": 50,
-          "done": 2,
-          "succeeded": 2,
-          "failed": 0
+          "done": 26,
+          "succeeded": 25,
+          "failed": 1
         }
       },
       "best_model": {
@@ -402,7 +402,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-23T06:59:07+01:00",
+      "updated_at": "2026-11-23T07:03:17+01:00",
       "state": "running",
       "workflow": "novelty_selection",
       "elements": [
@@ -436,9 +436,9 @@
         "high_accuracy_eval": {
           "status": "active",
           "total": 50,
-          "done": 45,
-          "succeeded": 44,
-          "failed": 1
+          "done": 48,
+          "succeeded": 46,
+          "failed": 2
         }
       },
       "best_model": {
