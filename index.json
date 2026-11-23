@@ -173,7 +173,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-23T07:29:41+01:00",
+      "updated_at": "2026-11-23T07:59:40+01:00",
       "state": "running",
       "workflow": "random_selection",
       "elements": [
@@ -203,7 +203,7 @@
           "status": "active",
           "candidates_target": 500,
           "selected_target": 50,
-          "md_runs_done": 22,
+          "md_runs_done": 47,
           "md_runs_total": 50
         },
         "high_accuracy_eval": {
@@ -228,7 +228,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-23T06:50:14+01:00",
+      "updated_at": "2026-11-23T07:58:38+01:00",
       "state": "running",
       "workflow": "novelty_selection",
       "elements": [
@@ -265,8 +265,8 @@
         "high_accuracy_eval": {
           "status": "active",
           "total": 50,
-          "done": 0,
-          "succeeded": 0,
+          "done": 2,
+          "succeeded": 2,
           "failed": 0
         }
       },
@@ -345,7 +345,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-23T07:28:53+01:00",
+      "updated_at": "2026-11-23T07:55:16+01:00",
       "state": "running",
       "workflow": "random_selection",
       "elements": [
@@ -379,8 +379,8 @@
         "high_accuracy_eval": {
           "status": "active",
           "total": 50,
-          "done": 26,
-          "succeeded": 25,
+          "done": 43,
+          "succeeded": 42,
           "failed": 1
         }
       },
@@ -459,7 +459,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-23T06:41:17+01:00",
+      "updated_at": "2026-11-23T07:44:16+01:00",
       "state": "running",
       "workflow": "committee_uncertainty",
       "elements": [
@@ -492,7 +492,7 @@
           "candidates_target": 500,
           "selected_target": 50,
           "md_runs_done": 0,
-          "md_runs_total": 1
+          "md_runs_total": 3
         },
         "high_accuracy_eval": {
           "status": "pending"
