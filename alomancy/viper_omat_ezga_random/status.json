@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "kind": "alomancy",
-  "updated_at": "2026-11-23T09:16:40+01:00",
+  "updated_at": "2026-11-23T09:42:44+01:00",
   "state": "running",
   "workflow": "random_selection",
   "elements": [
@@ -15,31 +15,36 @@
     "total": 5,
     "completed": 2
   },
-  "phase": "train_mlip",
+  "phase": "generate_structures",
   "phases": {
     "train_mlip": {
-      "status": "active",
+      "status": "done",
       "fits_total": 1,
-      "fits_done": 0,
+      "fits_done": 1,
       "fits_failed": 0,
-      "max_epochs": "dynamic"
+      "epochs": [
+        300
+      ],
+      "max_epochs": 300
     },
     "generate_structures": {
-      "status": "pending",
+      "status": "active",
       "candidates_target": 500,
-      "selected_target": 50
+      "selected_target": 50,
+      "md_runs_done": 0,
+      "md_runs_total": 1
     },
     "high_accuracy_eval": {
       "status": "pending"
     }
   },
   "best_model": {
-    "loop": 1,
+    "loop": 2,
     "trainer": "mace",
     "split": "test",
-    "mae_e_mev_per_atom": 39.77,
-    "mae_f_mev_per_a": 136.2,
-    "n_structures": 28
+    "mae_e_mev_per_atom": 37.79,
+    "mae_f_mev_per_a": 195.4,
+    "n_structures": 38
   },
   "report_loop": 1,
   "id": "viper_omat_ezga_random",
