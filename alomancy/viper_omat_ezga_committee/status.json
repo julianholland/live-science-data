@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "kind": "alomancy",
-  "updated_at": "2026-11-23T06:10:01+01:00",
+  "updated_at": "2026-11-23T06:41:17+01:00",
   "state": "running",
   "workflow": "committee_uncertainty",
   "elements": [
@@ -15,31 +15,38 @@
     "total": 5,
     "completed": 2
   },
-  "phase": "train_mlip",
+  "phase": "generate_structures",
   "phases": {
     "train_mlip": {
-      "status": "active",
+      "status": "done",
       "fits_total": 3,
-      "fits_done": 0,
+      "fits_done": 3,
       "fits_failed": 0,
-      "max_epochs": "dynamic"
+      "epochs": [
+        300,
+        300,
+        300
+      ],
+      "max_epochs": 300
     },
     "generate_structures": {
-      "status": "pending",
+      "status": "active",
       "candidates_target": 500,
-      "selected_target": 50
+      "selected_target": 50,
+      "md_runs_done": 0,
+      "md_runs_total": 1
     },
     "high_accuracy_eval": {
       "status": "pending"
     }
   },
   "best_model": {
-    "loop": 1,
+    "loop": 2,
     "trainer": "mace",
     "split": "test",
-    "mae_e_mev_per_atom": 44.16,
-    "mae_f_mev_per_a": 68.5,
-    "n_structures": 27
+    "mae_e_mev_per_atom": 35.54,
+    "mae_f_mev_per_a": 79.3,
+    "n_structures": 37
   },
   "report_loop": 1,
   "id": "viper_omat_ezga_committee",

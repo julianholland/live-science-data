@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "kind": "alomancy",
-  "updated_at": "2026-11-23T06:27:14+01:00",
+  "updated_at": "2026-11-23T06:59:56+01:00",
   "state": "running",
   "workflow": "random_selection",
   "elements": [
@@ -15,31 +15,36 @@
     "total": 5,
     "completed": 1
   },
-  "phase": "train_mlip",
+  "phase": "generate_structures",
   "phases": {
     "train_mlip": {
-      "status": "active",
+      "status": "done",
       "fits_total": 1,
-      "fits_done": 0,
+      "fits_done": 1,
       "fits_failed": 0,
-      "max_epochs": "dynamic"
+      "epochs": [
+        300
+      ],
+      "max_epochs": 300
     },
     "generate_structures": {
-      "status": "pending",
+      "status": "active",
       "candidates_target": 500,
-      "selected_target": 50
+      "selected_target": 50,
+      "md_runs_done": 2,
+      "md_runs_total": 50
     },
     "high_accuracy_eval": {
       "status": "pending"
     }
   },
   "best_model": {
-    "loop": 0,
+    "loop": 1,
     "trainer": "mace",
     "split": "test",
-    "mae_e_mev_per_atom": 33.59,
-    "mae_f_mev_per_a": 72.4,
-    "n_structures": 18
+    "mae_e_mev_per_atom": 42.94,
+    "mae_f_mev_per_a": 124.9,
+    "n_structures": 28
   },
   "report_loop": 0,
   "id": "viper_omat_md_random",
