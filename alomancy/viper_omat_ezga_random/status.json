@@ -1,8 +1,8 @@
 {
   "schema": 1,
   "kind": "alomancy",
-  "updated_at": "2026-11-23T09:42:44+01:00",
-  "state": "stalled",
+  "updated_at": "2026-11-24T15:43:33+01:00",
+  "state": "running",
   "workflow": "random_selection",
   "elements": [
     "C"
