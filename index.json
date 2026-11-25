@@ -173,7 +173,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-25T00:34:22+01:00",
+      "updated_at": "2026-11-25T04:14:23+01:00",
       "state": "running",
       "workflow": "random_selection",
       "elements": [
@@ -210,8 +210,8 @@
         "high_accuracy_eval": {
           "status": "active",
           "total": 50,
-          "done": 15,
-          "succeeded": 15,
+          "done": 16,
+          "succeeded": 16,
           "failed": 0
         }
       },
@@ -233,7 +233,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-25T03:01:59+01:00",
+      "updated_at": "2026-11-25T04:26:00+01:00",
       "state": "running",
       "workflow": "novelty_selection",
       "elements": [
@@ -247,7 +247,7 @@
         "total": 5,
         "completed": 2
       },
-      "phase": "generate_structures",
+      "phase": "high_accuracy_eval",
       "phases": {
         "train_mlip": {
           "status": "done",
@@ -260,14 +260,19 @@
           "max_epochs": 300
         },
         "generate_structures": {
-          "status": "active",
+          "status": "done",
           "candidates_target": 500,
           "selected_target": 50,
-          "md_runs_done": 10,
+          "candidates": 500,
+          "md_runs_done": 50,
           "md_runs_total": 50
         },
         "high_accuracy_eval": {
-          "status": "pending"
+          "status": "active",
+          "total": 50,
+          "done": 0,
+          "succeeded": 0,
+          "failed": 0
         }
       },
       "best_model": {
@@ -351,7 +356,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-24T15:43:33+01:00",
+      "updated_at": "2026-11-25T04:00:55+01:00",
       "state": "running",
       "workflow": "random_selection",
       "elements": [
@@ -365,7 +370,7 @@
         "total": 5,
         "completed": 2
       },
-      "phase": "generate_structures",
+      "phase": "high_accuracy_eval",
       "phases": {
         "train_mlip": {
           "status": "done",
@@ -378,14 +383,16 @@
           "max_epochs": 300
         },
         "generate_structures": {
-          "status": "active",
+          "status": "done",
           "candidates_target": 500,
-          "selected_target": 50,
-          "md_runs_done": 0,
-          "md_runs_total": 1
+          "selected_target": 50
         },
         "high_accuracy_eval": {
-          "status": "pending"
+          "status": "active",
+          "total": 50,
+          "done": 0,
+          "succeeded": 0,
+          "failed": 0
         }
       },
       "best_model": {
