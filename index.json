@@ -293,8 +293,8 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-24T15:02:59+01:00",
-      "state": "stalled",
+      "updated_at": "2026-11-25T20:59:58+01:00",
+      "state": "running",
       "workflow": "committee_uncertainty",
       "elements": [
         "C"
@@ -413,7 +413,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-25T14:55:18+01:00",
+      "updated_at": "2026-11-25T20:59:54+01:00",
       "state": "running",
       "workflow": "novelty_selection",
       "elements": [
@@ -470,8 +470,8 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-24T14:38:23+01:00",
-      "state": "stalled",
+      "updated_at": "2026-11-25T20:39:49+01:00",
+      "state": "running",
       "workflow": "committee_uncertainty",
       "elements": [
         "C"
