@@ -233,7 +233,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-24T15:45:32+01:00",
+      "updated_at": "2026-11-25T02:55:45+01:00",
       "state": "running",
       "workflow": "novelty_selection",
       "elements": [
@@ -263,7 +263,7 @@
           "status": "active",
           "candidates_target": 500,
           "selected_target": 50,
-          "md_runs_done": 3,
+          "md_runs_done": 9,
           "md_runs_total": 50
         },
         "high_accuracy_eval": {
