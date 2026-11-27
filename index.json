@@ -173,7 +173,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-27T02:13:08+01:00",
+      "updated_at": "2026-11-27T04:59:45+01:00",
       "state": "running",
       "workflow": "random_selection",
       "elements": [
@@ -210,8 +210,8 @@
         "high_accuracy_eval": {
           "status": "active",
           "total": 50,
-          "done": 23,
-          "succeeded": 23,
+          "done": 25,
+          "succeeded": 25,
           "failed": 0
         }
       },
