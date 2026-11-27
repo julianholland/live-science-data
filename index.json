@@ -173,7 +173,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-27T05:30:00+01:00",
+      "updated_at": "2026-11-27T05:36:08+01:00",
       "state": "running",
       "workflow": "random_selection",
       "elements": [
@@ -183,36 +183,26 @@
       "generator": "md",
       "evaluator": "qe",
       "loop": {
-        "current": 1,
+        "current": 2,
         "total": 5,
-        "completed": 1
+        "completed": 2
       },
-      "phase": "high_accuracy_eval",
+      "phase": "train_mlip",
       "phases": {
         "train_mlip": {
-          "status": "done",
+          "status": "active",
           "fits_total": 1,
-          "fits_done": 1,
+          "fits_done": 0,
           "fits_failed": 0,
-          "epochs": [
-            300
-          ],
-          "max_epochs": 300
+          "max_epochs": "dynamic"
         },
         "generate_structures": {
-          "status": "done",
+          "status": "pending",
           "candidates_target": 500,
-          "selected_target": 50,
-          "candidates": 500,
-          "md_runs_done": 50,
-          "md_runs_total": 50
+          "selected_target": 50
         },
         "high_accuracy_eval": {
-          "status": "active",
-          "total": 50,
-          "done": 49,
-          "succeeded": 49,
-          "failed": 0
+          "status": "pending"
         }
       },
       "best_model": {
@@ -223,7 +213,7 @@
         "mae_f_mev_per_a": 124.9,
         "n_structures": 28
       },
-      "report_loop": 0,
+      "report_loop": 1,
       "id": "viper_omat_md_random",
       "title": "Carbon: Random × NPT MD",
       "description": "Carbon MACE potential fine-tuned from the MACE-OMAT foundation model, using random selection (baseline) with NPT molecular dynamics exploration and Quantum ESPRESSO labelling. One of six runs comparing selection strategies and structure generators for the ALomancy paper.",
@@ -470,7 +460,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-27T02:41:00+01:00",
+      "updated_at": "2026-11-27T05:59:18+01:00",
       "state": "running",
       "workflow": "committee_uncertainty",
       "elements": [
@@ -507,8 +497,8 @@
         "high_accuracy_eval": {
           "status": "active",
           "total": 50,
-          "done": 0,
-          "succeeded": 0,
+          "done": 5,
+          "succeeded": 5,
           "failed": 0
         }
       },
