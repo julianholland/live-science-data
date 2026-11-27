@@ -403,7 +403,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-27T07:56:14+01:00",
+      "updated_at": "2026-11-27T08:19:27+01:00",
       "state": "running",
       "workflow": "novelty_selection",
       "elements": [
@@ -437,8 +437,8 @@
         "high_accuracy_eval": {
           "status": "active",
           "total": 50,
-          "done": 4,
-          "succeeded": 4,
+          "done": 6,
+          "succeeded": 6,
           "failed": 0
         }
       },
@@ -460,7 +460,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-27T07:57:21+01:00",
+      "updated_at": "2026-11-27T08:10:10+01:00",
       "state": "running",
       "workflow": "committee_uncertainty",
       "elements": [
@@ -470,36 +470,26 @@
       "generator": "ezga",
       "evaluator": "qe",
       "loop": {
-        "current": 2,
+        "current": 3,
         "total": 5,
-        "completed": 2
+        "completed": 3
       },
-      "phase": "high_accuracy_eval",
+      "phase": "train_mlip",
       "phases": {
         "train_mlip": {
-          "status": "done",
+          "status": "active",
           "fits_total": 3,
-          "fits_done": 3,
+          "fits_done": 0,
           "fits_failed": 0,
-          "epochs": [
-            300,
-            300,
-            300
-          ],
-          "max_epochs": 300
+          "max_epochs": "dynamic"
         },
         "generate_structures": {
-          "status": "done",
+          "status": "pending",
           "candidates_target": 500,
-          "selected_target": 50,
-          "selected": 50
+          "selected_target": 50
         },
         "high_accuracy_eval": {
-          "status": "active",
-          "total": 50,
-          "done": 49,
-          "succeeded": 49,
-          "failed": 0
+          "status": "pending"
         }
       },
       "best_model": {
@@ -510,7 +500,7 @@
         "mae_f_mev_per_a": 79.3,
         "n_structures": 37
       },
-      "report_loop": 1,
+      "report_loop": 2,
       "id": "viper_omat_ezga_committee",
       "title": "Carbon: Committee × EZGA",
       "description": "Carbon MACE potential fine-tuned from the MACE-OMAT foundation model, using committee-uncertainty selection with EZGA genetic-algorithm search exploration and Quantum ESPRESSO labelling. One of six runs comparing selection strategies and structure generators for the ALomancy paper.",
