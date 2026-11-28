@@ -174,7 +174,7 @@
       "schema": 1,
       "kind": "alomancy",
       "updated_at": "2026-11-27T05:36:08+01:00",
-      "state": "running",
+      "state": "stalled",
       "workflow": "random_selection",
       "elements": [
         "C"
