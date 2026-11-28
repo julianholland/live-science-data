@@ -284,7 +284,7 @@
       "schema": 1,
       "kind": "alomancy",
       "updated_at": "2026-11-27T03:04:48+01:00",
-      "state": "running",
+      "state": "stalled",
       "workflow": "committee_uncertainty",
       "elements": [
         "C"
