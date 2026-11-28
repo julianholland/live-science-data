@@ -283,8 +283,8 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-27T03:04:48+01:00",
-      "state": "stalled",
+      "updated_at": "2026-11-28T09:05:56+01:00",
+      "state": "running",
       "workflow": "committee_uncertainty",
       "elements": [
         "C"
@@ -403,7 +403,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-28T09:00:01+01:00",
+      "updated_at": "2026-11-28T09:03:49+01:00",
       "state": "running",
       "workflow": "novelty_selection",
       "elements": [
