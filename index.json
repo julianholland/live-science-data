@@ -403,7 +403,7 @@
     {
       "schema": 1,
       "kind": "alomancy",
-      "updated_at": "2026-11-27T08:57:11+01:00",
+      "updated_at": "2026-11-28T02:57:02+01:00",
       "state": "running",
       "workflow": "novelty_selection",
       "elements": [
